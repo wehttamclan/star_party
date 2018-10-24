@@ -5,10 +5,10 @@ class DayForecast
               :summary
 
   def initialize(data)
-    @time        = data[:time],
-    @moon_phase  = data[:moonPhase],
-    @rain_chance = data[:precipProbability],
-    @cloud_cover = data[:cloudCover],
+    @time        = data[:time]
+    @moon_phase  = data[:moonPhase]
+    @rain_chance = data[:precipProbability]
+    @cloud_cover = data[:cloudCover]
     @summary     = data[:summary]
   end
 

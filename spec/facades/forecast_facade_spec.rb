@@ -17,10 +17,10 @@ describe ForecastFacade do
       it 'returns dark sky json data' do
         results = subject.dark_sky_data
 
-        expect(results.first).to have_key(:time)
-        expect(results.first).to have_key(:moonPhase)
-        expect(results.first).to have_key(:precipProbability)
-        expect(results.first).to have_key(:cloudCover)
+        expect(results[:data].first).to have_key(:time)
+        expect(results[:data].first).to have_key(:moonPhase)
+        expect(results[:data].first).to have_key(:precipProbability)
+        expect(results[:data].first).to have_key(:cloudCover)
       end
     end
 

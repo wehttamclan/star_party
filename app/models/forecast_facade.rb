@@ -15,11 +15,12 @@ class ForecastFacade
     dark_sky_data[:summary]
   end
 
-
-
   def dark_sky_data
-    response = Faraday.get("https://api.darksky.net/#{ENV["darksky_api_key"]}/#{location}")
     JSON.parse(response.body, symbolize_names: true)[:daily]
+  end
+
+  def response
+    @response ||= Faraday.get("https://api.darksky.net/forecast/#{ENV["darksky_api_key"]}/#{location}")
   end
 
   def create_day_forecast_objects

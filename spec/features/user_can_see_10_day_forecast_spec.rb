@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "As an authenticated user" do
-  scenario "I can view ten day forecast with valid zip code" do
+  xscenario "I can view ten day forecast with valid zip code" do
     # work in authentication once that's built in
     # visit '/'
     #
