@@ -1,0 +1,12 @@
+<h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
+
+<div>
+  <% @forecast_results.each do |day_forecast| %>
+    <p>Date: <%= day_forecast.date %><p>
+    <p>Cloud Coverage: <%= day_forecast.cloud_coverage %><p>
+    <p>Chance of Rain: <%= day_forecast.rain_chance %><p>
+    <p>Moon Phase: <%= day_forecast.moon_phase %><p>
+    <p>Star Party Raing: <%= day_forecast.star_party_rating %><p>
+    <%= link_to "Choose this Day!", new_party_path, class: 'btn' %>
+  <% end %>
+</div>
