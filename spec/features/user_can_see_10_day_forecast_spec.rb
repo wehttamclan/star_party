@@ -7,7 +7,7 @@ feature "As an authenticated user" do
     #
     # fill_in :zip_code, with: "80203"
     # expect(current_page).to eq('/forecast')
-    visit '/forecast', params: {zip_code: "80203"} #delete this line once root page and button exist
+    visit forecast_path(zip_code: "80203") #delete this line once root page and button exist
 
     expect(page).to have_css('.day', count: 10)
 
