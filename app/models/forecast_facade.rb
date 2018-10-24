@@ -11,11 +11,20 @@ class ForecastFacade
     @zip_code.to_lat + "," + @zip_code.to_lon
   end
 
+  def week_summary
+    dark_sky_data[:summary]
+  end
+
 
 
   def dark_sky_data
     response = Faraday.get("https://api.darksky.net/#{ENV["darksky_api_key"]}/#{location}")
-    raw_forecast_data = JSON.parse(response.body, symbolize_names: true)[]
+    JSON.parse(response.body, symbolize_names: true)[:daily]
+  end
 
+  def create_day_forecast_objects
+    dark_sky_data[:data].map do |day_forecast_data|
+      DayForecast.new(day_forecast_data)
+    end
   end
 end
