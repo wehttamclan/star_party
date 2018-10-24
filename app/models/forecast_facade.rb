@@ -23,7 +23,7 @@ class ForecastFacade
     @response ||= Faraday.get("https://api.darksky.net/forecast/#{ENV["darksky_api_key"]}/#{location}")
   end
 
-  def create_day_forecast_objects
+  def day_forecast_objects
     dark_sky_data[:data].map do |day_forecast_data|
       DayForecast.new(day_forecast_data)
     end

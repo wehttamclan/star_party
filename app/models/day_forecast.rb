@@ -14,5 +14,9 @@ class DayForecast
 
   def time
     Time.at(@time)
-  end 
+  end
+  
+  def star_party_rating
+    "8"
+  end
 end

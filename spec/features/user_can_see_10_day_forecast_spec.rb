@@ -1,7 +1,7 @@
 require "rails_helper"
 
 feature "As an authenticated user" do
-  xscenario "I can view ten day forecast with valid zip code" do
+  scenario "I can view ten day forecast with valid zip code" do
     # work in authentication once that's built in
     # visit '/'
     #
@@ -12,11 +12,12 @@ feature "As an authenticated user" do
     expect(page).to have_css('.day', count: 10)
 
     within(first('.day')) do
-      expect(page).to have_css('.date')
-      expect(page).to have_css('.cloud_coverage')
+      expect(page).to have_css('.time')
+      expect(page).to have_css('.cloud_cover')
       expect(page).to have_css('.moon_phase')
       expect(page).to have_css('.rain_chance')
       expect(page).to have_css('.rating')
+      expect(page).to have_css('.select')
     end
   end
 end
