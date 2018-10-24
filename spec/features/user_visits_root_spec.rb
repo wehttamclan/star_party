@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'user visits the landing page' do
-  context 'as a visitor' do
+  scenario 'as a visitor' do
     visit '/'
 
     expect(page).to have_link "Log In / Sign Up"

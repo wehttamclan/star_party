@@ -51,6 +51,7 @@ group :development, :test do
   gem 'faker'
   gem 'mailcatcher'
   gem 'active-designer'
+  gem 'simplecov'
 end
 
 group :development do
