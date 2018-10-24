@@ -1,0 +1,13 @@
+<h1>Here are all Star Parties in Zip Code <%= @party_search_result.first[:zip_code] %>:</h1>
+
+<% @party_search_result.parties.each do |party| %>
+  <ul class="party">
+    <h4 class="title"><%= party.title %></h4>
+    <li class="title"><%= party.date %></li>
+    <li class="title"><%= party.host %></li>
+    <li class="title"><%= party.street_address %></li>
+    <li class="title"><%= party.city %></li>
+    <li class="title"><%= party.state %></li>
+    <li class="title"><%= party.zip_code %></li>
+  </ul>
+<% end %>
