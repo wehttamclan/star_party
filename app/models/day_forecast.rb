@@ -15,8 +15,29 @@ class DayForecast
   def time
     Time.at(@time)
   end
-  
+
   def star_party_rating
-    "8"
+    raw_score = moonscore + rain_chance + cloud_cover
+    (10 - ((raw_score + 1) * 2.5)).round(2)
+  end
+
+  private
+
+  def moon_phase_converter
+    {
+      0..0.25 => 0,
+      0.26...0.5 => 0.5,
+      0.5 => 1,
+      0.51..0.75 => 0.5,
+      0.76..1 => 0
+    }
+  end
+
+  def moonscore
+    moon_phase_converter.each do |range, score|
+      if range === moon_phase
+        return score
+      end
+    end
   end
 end
