@@ -13,7 +13,15 @@ describe DayForecast do
     expect(subject).to be_a DayForecast
   end
 
-  it 'attributes' do
+  it 'has attributes' do
     expect(subject.time).to eq '2018-10-24 00:00:00 -0600'
+  end
+
+  context 'instance methods' do
+    context '#star_party_rating' do
+      it 'uses attributes to calculate a star_party_rating' do
+        expect(subject.star_party_rating).to eq(1.6)
+      end
+    end
   end
 end
