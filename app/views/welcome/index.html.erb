@@ -9,8 +9,8 @@
   <div class="button-holder">
     <%= form_tag :party_search, method: :get, class: "form-inline" do %>
       <div class="form-group search-field">
-        <%= submit_tag "Find a Star Party!", class: "btn" %>
-        <div class="hidden-drop"><%= text_field_tag :q, nil, placeholder: 'Enter A Zip Code' , class: "form-control" %></div>
+        <%= button_tag "Find a Star Party!", class: "btn find-a-party", type: 'button' %>
+        <div><%= text_field_tag :q, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %></div>
       </div>
     <% end %>
     </br>
