@@ -1,0 +1,22 @@
+class DayForecast
+  attr_reader :moon_phase,
+              :rain_chance,
+              :cloud_cover,
+              :summary
+
+  def initialize(data)
+    @time        = data[:time]
+    @moon_phase  = data[:moonPhase]
+    @rain_chance = data[:precipProbability]
+    @cloud_cover = data[:cloudCover]
+    @summary     = data[:summary]
+  end
+
+  def time
+    Time.at(@time)
+  end
+  
+  def star_party_rating
+    "8"
+  end
+end
