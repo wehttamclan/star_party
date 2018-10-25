@@ -1,5 +1,14 @@
 $(document).ready(function(){
+  $('.hidden-form').hide();
+  $('.hidden-button').hide();
   $(".find-a-party").click(function(){
-    $('.hidden-drop').hide();
+    $('.hidden-form').slideToggle(function(){
+      $(this).children(".hidden-drop").focus()
+    });
+  });
+  $(".plan-a-party").click(function(){
+    $('.hidden-form').slideToggle(function(){
+      $(this).children(".hidden-drop").focus()
+    });
   });
 });
