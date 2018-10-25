@@ -14,8 +14,8 @@
         <div>
           <%= button_tag "Find a Star Party!", class: "btn zip-search", type: 'button' %>
           <div class="hidden-form">
-            <%= text_field_tag :q, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
-            <%= button_tag "Search", class: "btn find-a-party", class: "form-control hidden-button" %>
+            <%= text_field_tag :q_find, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
+            <%= button_tag "Search", class: "btn find-a-party form-control hidden-button find" %>
           </div>
         </div>
       </div>
@@ -24,9 +24,9 @@
       <div class="form-group search-field">
         <div>
           <%= button_tag "Plan a Star Party!", class: "btn zip-search", type: 'button' %>
-            <div class="hidden-form">
-              <%= text_field_tag :q, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
-              <%= button_tag "Search", class: "btn find-a-party", class: "form-control hidden-button" %>
+            <div class="hidden-form plan">
+              <%= text_field_tag :q_plan, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
+              <%= button_tag "Search", class: "btn find-a-party form-control hidden-button" %>
             </div>
         </div>
       </div>

@@ -6,8 +6,8 @@ describe 'visitor searches for parties' do
 
     visit '/'
 
-    fill_in :q, with: 80203
-    click_on "Find a Star Party!"
+    fill_in :q_find, with: 80203
+    find(".find", visible: false).click
 
     expect(current_path).to eq("/party_search")
     expect(page).to have_css(".party")
