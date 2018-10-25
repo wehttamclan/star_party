@@ -1,13 +1,8 @@
 $(document).ready(function(){
   $('.hidden-form').hide();
   $('.hidden-button').hide();
-  $(".find-a-party").click(function(){
-    $('.hidden-form').slideToggle(function(){
-      $(this).children(".hidden-drop").focus()
-    });
-  });
-  $(".plan-a-party").click(function(){
-    $('.hidden-form').slideToggle(function(){
+  $(".zip-search").click(function(){
+    $(this).parent().children('.hidden-form').slideToggle(function(){
       $(this).children(".hidden-drop").focus()
     });
   });
