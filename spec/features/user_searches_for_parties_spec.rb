@@ -17,10 +17,7 @@ describe 'visitor searches for parties' do
         expect(page).to have_css(".title")
         expect(page).to have_css(".date")
         expect(page).to have_css(".description")
-        expect(page).to have_css(".street_address")
-        expect(page).to have_css(".city")
-        expect(page).to have_css(".state")
-        expect(page).to have_css(".zip_code")
+        expect(page).to have_css(".location")
       end
     end
 

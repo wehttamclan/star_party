@@ -3,8 +3,8 @@ class Party < ApplicationRecord
                         :date,
                         :zip_code
 
-def location
-  "#{self.street_address}, #{self.city}, #{self.state}, #{self.zip_code}"
-end
+  def location
+    "#{self.street_address}, #{self.city}, #{self.state} #{self.zip_code}"
+  end
 
 end
