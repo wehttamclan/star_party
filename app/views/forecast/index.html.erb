@@ -1,14 +1,14 @@
 <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
 <p><%= @forecast_results.week_summary %></p>
 
-<div>
-  <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
-    <p>Date: <%= day_forecast.time %><p>
-    <p>Summary: <%= day_forecast.summary %></p>
-    <p>Cloud Coverage: <%= day_forecast.cloud_cover %><p>
-    <p>Chance of Rain: <%= day_forecast.rain_chance %><p>
-    <p>Moon Phase: <%= day_forecast.moon_phase %><p>
-    <p>Star Party Raing: <%= day_forecast.star_party_rating %><p>
-    "Choose this Day!"
-  <% end %>
-</div>
+<% @forecast_results.day_forecast_objects.each do |day_forecast| %>
+  <div class="day">
+    <p class="time">Date: <%= day_forecast.time %><p>
+    <p class="summary">Summary: <%= day_forecast.summary %></p>
+    <p class="cloud-cover">Cloud Coverage: <%= day_forecast.cloud_cover %><p>
+    <p class="rain-chance">Chance of Rain: <%= day_forecast.rain_chance %><p>
+    <p class="moon-phase">Moon Phase: <%= day_forecast.moon_phase %><p>
+    <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
+    <p class="select">"Choose this Day!"<p>
+  </div>
+<% end %>

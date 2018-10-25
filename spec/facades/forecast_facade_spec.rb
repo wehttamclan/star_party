@@ -1,7 +1,6 @@
 require "rails_helper"
 
 describe ForecastFacade do
-
   subject { ForecastFacade.new("80203")}
 
   it 'exists' do
@@ -15,12 +14,9 @@ describe ForecastFacade do
   context 'instance methods' do
     context '#dark_sky_data' do
       it 'returns dark sky json data' do
-        results = subject.dark_sky_data
+        results = subject.day_forecast_objects
 
-        expect(results[:data].first).to have_key(:time)
-        expect(results[:data].first).to have_key(:moonPhase)
-        expect(results[:data].first).to have_key(:precipProbability)
-        expect(results[:data].first).to have_key(:cloudCover)
+        expect(results.length).to eq(8)
       end
     end
 
