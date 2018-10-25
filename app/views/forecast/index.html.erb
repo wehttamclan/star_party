@@ -1,6 +1,6 @@
+<% cache("#{@forecast_results.zip_code}") do %>
 <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
 <p><%= @forecast_results.week_summary %></p>
-
 <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
   <div class="day">
     <p class="time">Date: <%= day_forecast.time %><p>
@@ -11,4 +11,5 @@
     <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
     <p class="select">"Choose this Day!"<p>
   </div>
+<% end %>
 <% end %>
