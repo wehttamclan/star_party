@@ -5,9 +5,22 @@
   </div>
 <% end %>
 
-<button type="button" class="d-block btn btn-btn-outline-dark btn-lg">Find a Party!</button>
-<button type="button" class="d-block btn btn-btn-outline-dark btn-lg">Plan a Party!</button>
-
-<div class="image-container">
-  <img src="<%= @apod.source %>" class="apod" alt="<%= @apod.description %>">
+<div class="landing-body">
+  <div class="cont">
+    <div class="image-container">
+      <img src="<%= @apod.source %>" class="apod" alt="<%= @apod.description %>">
+    </div>
+  </div>
+  </br>
+  </br>
+  <div class="button-holder">
+    <%= form_tag :party_search, method: :get, class: "form-inline" do %>
+      <div class="form-group search-field">
+        <%= submit_tag "Find a Star Party!", class: "btn" %>
+        <div class="hidden-drop"><%= text_field_tag :q, nil, placeholder: 'Enter A Zip Code' , class: "form-control" %></div>
+      </div>
+    <% end %>
+    </br>
+    <button type="button" class="btn">Plan a Star Party!</button>
+  </div>
 </div>
