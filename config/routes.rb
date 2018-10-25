@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/forecast', to: 'forecast#index'
+  
+  get "/party_search", to: 'party_search#index'
+
+  get "/plan_party", to: 'plan_party#index'
 end
