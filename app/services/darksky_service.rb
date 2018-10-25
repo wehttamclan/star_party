@@ -6,7 +6,7 @@ class DarkskyService
   def location
     @zip_code.to_lat + "," + @zip_code.to_lon
   end
-  
+
   def dark_sky_data
     JSON.parse(response.body, symbolize_names: true)[:daily]
   end
