@@ -1,4 +1,6 @@
 class Party < ApplicationRecord
-  validate_presence_of()
+  validates_presence_of :title,
+                        :date,
+                        :zip_code
 
 end
