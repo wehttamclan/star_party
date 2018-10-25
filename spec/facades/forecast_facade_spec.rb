@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe ForecastFacade do
-  subject { ForecastFacade.new("80203")}
+  subject { ForecastFacade.new("80203") }
 
   it 'exists' do
     expect(subject).to be_a(ForecastFacade)
@@ -12,18 +12,30 @@ describe ForecastFacade do
   end
 
   context 'instance methods' do
-    context '#dark_sky_data' do
+    context '#day_forecast_objects' do
       it 'returns dark sky json data' do
         results = subject.day_forecast_objects
 
         expect(results.length).to eq(8)
+        expect(results.first).to be_a DayForecast
       end
     end
 
-    context "#location" do
-      it 'returns string of lat and long' do
-        expect(subject.location).to eq("39.731286,-104.98306")
+    context '#zip_code' do
+      it 'returns the zip code passed in' do
+        zip_code = subject.zip_code
+
+        expect(zip_code).to eq('80203')
       end
     end
+
+    context '#week_summary' do
+      it 'returns the summary for the week' do
+        summary = subject.week_summary
+
+        expect(summary).to be_a String
+      end
+    end
+
   end
 end

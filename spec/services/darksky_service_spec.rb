@@ -11,5 +11,10 @@ describe DarkskyService do
       expect(results.first).to have_key(:precipProbability)
       expect(results.first).to have_key(:cloudCover)
     end
+    context "#location" do
+      it 'returns string of lat and long' do
+        expect(subject.location).to eq("39.731286,-104.98306")
+      end
+    end
   end
 end

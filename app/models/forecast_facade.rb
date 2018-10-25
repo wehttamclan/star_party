@@ -5,15 +5,6 @@ class ForecastFacade
     @zip_code = zip_code
   end
 
-  # def zip_code
-  #   @zip_code
-  # end
-
-  def location
-    service.location
-    # @zip_code.to_lat + "," + @zip_code.to_lon
-  end
-
   def week_summary
     service.dark_sky_data[:summary]
   end
@@ -24,8 +15,8 @@ class ForecastFacade
     end
   end
 
+  private
   def service
     @service ||= DarkskyService.new(zip_code)
   end
-
 end
