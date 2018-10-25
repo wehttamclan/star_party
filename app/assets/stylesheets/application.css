@@ -23,12 +23,15 @@ body {
   background-color: #202030;
   width: 100%;
   white-space: nowrap;
+  box-shadow: -1px 1px 2px #202030;
+  z-index: 10;
 }
 
 .image-container {
   max-height: 675px;
   width: auto;
   overflow: hidden;
+  margin-bottom: -60px;
 }
 .image-container img {
   height: 675px;
