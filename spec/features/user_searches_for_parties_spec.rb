@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe 'visitor searches for parties' do
   scenario 'with a valid zip code' do
+    create_list(:party, 5)
+
     visit '/'
 
     fill_in :q, with: 80203
@@ -13,7 +15,7 @@ describe 'visitor searches for parties' do
     within(first(".party")) do
       expect(page).to have_css(".title")
       expect(page).to have_css(".date")
-      expect(page).to have_css(".host")
+      expect(page).to have_css(".description")
       expect(page).to have_css(".street_address")
       expect(page).to have_css(".city")
       expect(page).to have_css(".state")
