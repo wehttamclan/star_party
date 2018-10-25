@@ -5,6 +5,6 @@ class PartySearchResult
 
   def parties
     #amend this to exclude past parties
-    @parties ||= Party.where(zip_code: @zip_code)
+    @parties ||= Party.where('zip_code = ? AND date >= ?', @zip_code, Date.today)
   end
 end

@@ -6,6 +6,4 @@ describe PartySearchResult do
     expect(psr).to be_a(PartySearchResult)
   end
 
-  
-
 end

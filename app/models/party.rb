@@ -3,4 +3,8 @@ class Party < ApplicationRecord
                         :date,
                         :zip_code
 
+def location
+  
+end
+
 end
