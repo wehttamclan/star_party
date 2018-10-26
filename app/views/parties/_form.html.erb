@@ -1,0 +1,35 @@
+<div class="landing-body">
+
+<div class="button-holder">
+<%= form_for @party, class: "form-inline" do |f| %>
+<div class="new-form">
+  
+  <div class="form-group">
+    <%= f.text_field :title, placeholder: 'Title', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :description, placeholder: 'Description', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :street_address, placeholder: 'Street Address', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :city, placeholder: 'City', class: "col-sm-2" %>
+  </div>
+
+  <div class="">
+    <%= f.text_field :zip_code, placeholder: "#{@party.zip_code}", readonly: true, class: "col-sm-2 zip-code" %>
+  </div>
+  <div class="form-group">
+    <%= select_tag :state, options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2" %>
+  </div>
+  <div class="">
+    <%= f.submit "Create a Star Party", class: "btn" %>
+  </div>
+  </div>
+<% end %>
+</div>
+</div>

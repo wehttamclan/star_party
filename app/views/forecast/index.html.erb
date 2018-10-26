@@ -5,7 +5,9 @@
       <section class='top-weather-card'>
         <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
         <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
-        <%= link_to "Select this Day", new_party_path, class: 'day select' %>
+
+        <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select'  %>
+
       </section>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">

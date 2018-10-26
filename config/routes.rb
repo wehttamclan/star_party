@@ -6,5 +6,6 @@ Rails.application.routes.draw do
 
   get "/party_search", to: 'party_search#index'
 
-  resources :parties, only: [:new]
+  resources :parties, only: [:new, :create]
+
 end

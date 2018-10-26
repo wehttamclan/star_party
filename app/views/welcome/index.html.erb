@@ -6,26 +6,33 @@
   </br>
   <div class="button-holder">
     <%= form_tag :party_search, method: :get, class: "form-inline" do %>
+
       <div class="form-group search-field">
         <div>
           <%= button_tag "Find a Star Party!", class: "btn zip-search", type: 'button' %>
+          
           <div class="hidden-form">
             <%= text_field_tag :q_find, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
             <%= button_tag "Search", class: "btn find-a-party form-control hidden-button find" %>
           </div>
+
         </div>
       </div>
+
     <% end %>
     <%= form_tag :forecast, method: :get, class: "form-inline" do %>
       <div class="form-group search-field">
         <div>
+
           <%= button_tag "Plan a Star Party!", class: "btn zip-search", type: 'button' %>
             <div class="hidden-form plan">
               <%= text_field_tag :zip_code, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
               <%= button_tag "Search", class: "btn find-a-party form-control hidden-button" %>
             </div>
+
         </div>
       </div>
+      
     <% end %>
   </div>
 </div>
