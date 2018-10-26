@@ -1,17 +1,28 @@
 <% cache("#{@forecast_results.zip_code}") do %>
-<h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
+  <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
 
-<% @forecast_results.day_forecast_objects.each do |day_forecast| %>
-<div class='card'>
-    <h5 class="time card-header"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
-    <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
-      <div class="day card-body">
-    <p class="summary card-text">Summary: <%= day_forecast.summary %></p>
-    <p class="cloud-cover card-text">Cloud Coverage: <%= day_forecast.cloud_cover %><p>
-    <p class="rain-chance card-text">Chance of Rain: <%= day_forecast.rain_chance %><p>
-    <p class="moon-phase card-text">Moon Phase: <%= day_forecast.moon_phase %><p>
-    <p class="card-text> <%= link_to "Select this Day", new_party_path, class: 'btn' %>
+  <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
+  <div class='card-deck'>
+    <div class='card'>
+      <section class='top-card'
+      <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
+        <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
+        <%= link_to "Select this Day", new_party_path, class: 'top-btn' %>
+      </section>
+      <section class='bottom-card'>
+          <div class="day card-body">
+            <p class="summary card-text"><%= day_forecast.summary %></p>
+            <div class='column'>
+              <p class="rating">Star Party Rating: <%= day_forecast.star_party_rating %><p>
+              <p class="cloud-cover card-text">Cloud Coverage: <%= (day_forecast.cloud_cover * 100).to_i %>%</p>
+            </div>
+            <div class='column'>
+              <p class="rain-chance card-text">Chance of Rain: <%= (day_forecast.rain_chance * 100).to_i %>%</p>
+              <p class="moon-phase card-text">Moon Phase: <%= day_forecast.moon_phase %></p>
+            </div>
+          </div>
+        </section>
+    </div>
   </div>
-<% end %>
-</div>
+  <% end %>
 <% end %>
