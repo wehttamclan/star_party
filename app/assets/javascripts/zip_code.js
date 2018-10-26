@@ -12,8 +12,8 @@ $(document).ready(function(){
   $('.hidden-form').hide();
   $('.hidden-button').hide();
   $(".zip-search").click(function(){
-    if ($('.hidden-drop').height() > 0) {
-      $('.hidden-form').slideUp();
+    if ($('.hidden-form').height() > 0) {
+      $(this).parents().parents().siblings().find('.hidden-form').slideUp();
     }
     $(this).parent().children('.hidden-form').slideToggle(function(){
       $(this).children(".hidden-drop").focus();

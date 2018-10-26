@@ -16,34 +16,33 @@
     <title>Star Party</title>
     <%= javascript_include_tag 'application.js' %>
   </head>
-  <body>
-    <nav class="navbar navbar-dark navbar-fixed-top">
-      <a class="navbar-brand" href="/"><img src="https://i.imgur.com/JqWKd31.png" class="logo"></a>
+
+
+  <body background="<%= apod.source %>">
+    <nav class="navbar navbar-dark fixed-top">
+      <a class="navbar-brand" href="/">
+        <%= image_tag('sp_logo.png', alt: "SP Logo", class: 'img') %>
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Log In / Sign Up</a>
-      </li>
-    </div>
-
-    <% flash.each do |type, message| %>
-    <div class="alert alert-dark" role="alert">
-      <%= message.html_safe %>
-    </div>
-    <% end %>
-
-  </nav>
-    <div class="image-container">
-      <% cache("nasa-apod") do %>
-        <img src="<%= apod.source %>" class="apod" alt="<%= apod.description %>">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link sign-up" href="#">Log In / Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <% flash.each do |type, message| %>
+      <div class="alert alert-dark" role="alert">
+        <%= message.html_safe %>
+      </div>
       <% end %>
+    </nav>
+    <div>
+      <%= yield %>
     </div>
-
-    <%= yield %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
