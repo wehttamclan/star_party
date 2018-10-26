@@ -1,0 +1,30 @@
+<div class="search-field">
+<%= form_for @party do |f| %>
+  
+  <div class="form-group">
+    <%= f.text_field :title, placeholder: 'Title', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :description, placeholder: 'Description', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :street_address, placeholder: 'Street Address', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :city, placeholder: 'City', class: "col-sm-2" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :zip_code, placeholder: "#{@party.zip_code}", readonly: true, class: "col-sm-2 form-control" %>
+  </div>
+  <div class="form-group">
+    <%= select_tag :state, options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Create a Star Party", class: "btn" %>
+  </div>
+<% end %>
+</div>
