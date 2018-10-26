@@ -1,15 +1,17 @@
 <% cache("#{@forecast_results.zip_code}") do %>
 <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
-<p><%= @forecast_results.week_summary %></p>
+
 <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
-  <div class="day">
-    <p class="time">Date: <%= day_forecast.time %><p>
-    <p class="summary">Summary: <%= day_forecast.summary %></p>
-    <p class="cloud-cover">Cloud Coverage: <%= day_forecast.cloud_cover %><p>
-    <p class="rain-chance">Chance of Rain: <%= day_forecast.rain_chance %><p>
-    <p class="moon-phase">Moon Phase: <%= day_forecast.moon_phase %><p>
+<div class='card'>
+    <h5 class="time card-header"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
     <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
-    <p class="select">"Choose this Day!"<p>
+      <div class="day card-body">
+    <p class="summary card-text">Summary: <%= day_forecast.summary %></p>
+    <p class="cloud-cover card-text">Cloud Coverage: <%= day_forecast.cloud_cover %><p>
+    <p class="rain-chance card-text">Chance of Rain: <%= day_forecast.rain_chance %><p>
+    <p class="moon-phase card-text">Moon Phase: <%= day_forecast.moon_phase %><p>
+    <p class="card-text> <%= link_to "Select this Day", new_party_path, class: 'btn' %>
   </div>
 <% end %>
+</div>
 <% end %>

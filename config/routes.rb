@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/forecast', to: 'forecast#index'
 
   get "/party_search", to: 'party_search#index'
+
+  resources :parties, only: [:new]
 end
