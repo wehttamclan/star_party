@@ -74,7 +74,7 @@ describe 'visitor searches for parties' do
       fill_in :q_find, with: 81111
       find(".find", visible: false).click
 
-      expect(current_path).to eq("/party_search")
+      expect(current_path).to eq("/")
       expect(page).to_not have_css(".party")
       expect(page).to have_content("No parties found in zipcode 81111. Try another search!")
     end
