@@ -1,27 +1,35 @@
 <% cache("#{@forecast_results.zip_code}") do %>
   <h1 class="fc-results">Forecast Results for <%= @forecast_results.zip_code %></h1>
-  <div class='card-deck'>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
-    <div class='card'>
-      <section class='top-card'>
-      <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
+    <div class='weather-card'>
+      <section class='top-weather-card'>
+        <h5><%= day_forecast.time.strftime("%A, %b %d") %></h5>
         <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
-        <%= link_to "Select this Day", new_party_path, class: 'top-btn select' %>
+        <%= link_to "Select this Day", new_party_path, class: 'select' %>
       </section>
-      <section class='bottom-card'>
-          <div class="day card-body">
-            <p class="summary card-text"><%= day_forecast.summary %></p>
-            <div class='column'>
-              <p class="rating">Star Party Rating: <%= day_forecast.star_party_rating %><p>
-              <p class="cloud-cover card-text">Cloud Coverage: <%= (day_forecast.cloud_cover * 100).to_i %>%</p>
-            </div>
-            <div class='column'>
-              <p class="rain-chance card-text">Chance of Rain: <%= (day_forecast.rain_chance * 100).to_i %>%</p>
-              <p class="moon-phase card-text">Moon Phase: <br><%= day_forecast.moon_phase %></p>
-            </div>
-          </div>
-        </section>
+      <section class='bottom-weather-card'>
+        <div class="day weather-card-body">
+          <table>
+            <p class="summary weather-card-body"><%= day_forecast.summary %></p>
+            <tr>
+              <th>Star Party Rating</th>
+              <th>Cloud Coverage</th>
+            </tr>
+            <tr>
+              <td><%= day_forecast.star_party_rating %></td>
+              <td><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
+            </tr>
+            <tr>
+              <th>Chance of Rain</th>
+              <th>Moon Phase</th>
+            </tr>
+            <tr>
+              <td><%= (day_forecast.rain_chance * 100).to_i %>%</td>
+              <td><%= day_forecast.moon_phase %></td>
+            </tr>
+          </table>
+        </div>
+      </section>
     </div>
   <% end %>
-  </div>
 <% end %>

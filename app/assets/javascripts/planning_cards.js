@@ -1,12 +1,12 @@
 $(document).ready(function(){
-  $('.bottom-card').hide();
+  $('.bottom-weather-card').hide();
   $('.top-btn').click(function(button) {
     button.stopPropagation();
   });
-  $(".top-card").click(function(){
-    if ($('.bottom-card').height() > 0) {
-      $(this).parents().siblings().children('.bottom-card').slideUp();
+  $(".top-weather-card").click(function(){
+    if ($('.bottom-weather-card').height() > 0) {
+      $(this).parents().siblings().children('.bottom-weather-card').slideUp();
     }
-    $(this).siblings('.bottom-card').slideToggle();
+    $(this).siblings('.bottom-weather-card').slideToggle();
   });
 });
