@@ -7,7 +7,6 @@ describe 'user visits the landing page' do
     expect(page).to have_link "Log In / Sign Up"
     expect(page).to have_button "Find a Star Party"
     expect(page).to have_button "Plan a Star Party"
-    expect(page).to have_css(".apod")
 
   end
 end
