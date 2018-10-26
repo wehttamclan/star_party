@@ -20,13 +20,13 @@
     <%= f.text_field :city, placeholder: 'City', class: "col-sm-2" %>
   </div>
 
-  <div class="form-group">
-    <%= f.text_field :zip_code, placeholder: "#{@party.zip_code}", readonly: true, class: "col-sm-2 form-control" %>
+  <div class="">
+    <%= f.text_field :zip_code, placeholder: "#{@party.zip_code}", readonly: true, class: "col-sm-2 zip-code" %>
   </div>
   <div class="form-group">
     <%= select_tag :state, options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2" %>
   </div>
-  <div class="form-group">
+  <div class="">
     <%= f.submit "Create a Star Party", class: "btn" %>
   </div>
   </div>
