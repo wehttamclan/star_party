@@ -193,6 +193,21 @@ body {
   box-shadow: inset -1px 2px 4px #161621;
 }
 
+.index-card {
+  font-family: 'Athiti', sans-serif;
+  color: #EAE0D5;
+  background-color: #455777;
+  border-radius: 7px;
+  margin: 0px 10px 0px 10px;
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  box-shadow: inset -1px 2px 4px #161621;
+}
+
+.party {
+  margin: 0px 10px 0px 10px;
+}
+
 .column {
   float: left;
   width: 50%;
