@@ -28,7 +28,8 @@ You can also clone down this repo and play with the code!
   ```
      1. git clone git@github.com:BeccaHyland/star_party.git
      2. bundle install
-     3. rake db:create,migrate,seed  (Running seed is optional. If run, it will load a few fake parties for display and development purposes.)
+     3. rake db:create,migrate,seed  
+     (Running seed is optional. If run, it will load a few fake parties for display and development purposes.)
      ```
 
 
