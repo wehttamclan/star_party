@@ -73,7 +73,7 @@ body {
 }
 
 .new-form {
-  margin-top: -380px;
+  margin-top: 230px;
   position: absolute;
   transform: translate(-50%, -50%);
 }
@@ -87,6 +87,18 @@ body {
   font-size: 24px;
   background-color: #EAE0D5;
   caret-color: #202030;
+  color: gray;
+  border-radius: 10px;
+  opacity: 0.8;
+  border-color: #202030;
+  box-shadow: inset -1px 2px 16px #161621;
+  font-family: 'Athiti', sans-serif;
+}
+
+.form-field {
+  font-size: 24px;
+  background-color: #EAE0D5;
+  caret-color: #202030;
   color: #202030;
   border-radius: 10px;
   opacity: 0.8;
@@ -95,10 +107,14 @@ body {
   font-family: 'Athiti', sans-serif;
 }
 
+.field {
+  padding-top: 10px;
+}
+
 .top-card {
   position: inline;
 }
-.fc-results {
+.title {
   font-size: 32px;
   background-color: #202030;
   color: #EAE0D5;
@@ -142,6 +158,10 @@ body {
   box-shadow: inset -1px 2px 12px #161621;
 }
 
+.top-btn {
+
+}
+
 .bottom-weather-card {
   font-family: 'Athiti', sans-serif;
   color: #EAE0D5;
@@ -161,6 +181,10 @@ body {
 
 .weather-card {
   margin: 15px 15px 0px 15px;
+}
+
+.create-button {
+  margin-top: 30px;
 }
 
 table {

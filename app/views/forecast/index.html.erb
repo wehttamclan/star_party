@@ -1,5 +1,5 @@
 <% cache("#{@forecast_results.zip_code}") do %>
-  <h1 class="fc-results">Forecast Results for <%= @forecast_results.zip_code %></h1>
+  <h1 class="title">Forecast Results for <%= @forecast_results.zip_code %></h1>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
       <section class='top-weather-card'>
