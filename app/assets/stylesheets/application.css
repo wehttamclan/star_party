@@ -114,6 +114,7 @@ body {
 .top-card {
   position: inline;
 }
+
 .title {
   font-size: 32px;
   background-color: #202030;
@@ -129,6 +130,7 @@ body {
 }
 
 .top-weather-card {
+  display: flex;
   font-family: 'Athiti', sans-serif;
   background-color: #202030;
   color: #EAE0D5;
@@ -137,13 +139,12 @@ body {
   padding: 15px;
   font-size: 20px;
   z-index: 3;
-  display: flex;
-
-}
-
-.content {
   justify-content: space-between;
 }
+
+.elements {
+}
+
 
 .date-icon {
   text-align: center;
@@ -159,13 +160,8 @@ body {
   text-align: center;
 }
 
-
-.rating-wrapper {
-  text-align: center;
-}
-
 .score-select {
-  text-align: right;
+  text-align: center;
 }
 
 .score-wrapper {
@@ -180,15 +176,11 @@ body {
   opacity: 0.85;
   border-color: #202030;
   font-family: 'Athiti', sans-serif;
-  float: right;
   padding: 1px 6px 1px 6px;
   margin-top: 15px;
   box-shadow: inset -1px 2px 12px #161621;
 }
 
-.top-btn {
-
-}
 
 .bottom-weather-card {
   font-family: 'Athiti', sans-serif;
