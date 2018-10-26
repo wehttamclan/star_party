@@ -15,20 +15,24 @@ You can also clone down this repo and play with the code!
     - allows us to easily convert zip codes to latituges and longitudes 
   - `gem 'faraday'` https://github.com/lostisland/faraday
     - for making our API calls
-  - 
   
-     
+  To user our app on your local, you will need two API Keys:
+    - https://api.nasa.gov/index.html#apply-for-an-api-key (can be requested for free)
+      - NASA API used to pull the background image, the NASA Astronomy Picture of the Day.
+    - https://darksky.net/dev/docs (can be resquested for free)
+      - Dark Sky API used for all weather and moon related information.
+  
 
 * Configuration
+  To clone down and configure this project on your local, follow these steps in your terminal:
+  ```1. git clone git@github.com:BeccaHyland/star_party.git
+     2. bundle install
+     3. rake db:create,migrate,seed  (Running seed is optional. If run, it will load a few fake parties for display and development purposes.)```
 
-* Database creation
-
-* Database initialization
 
 * How to run the test suite
+  This project uses RSpec for its test suite. To run the test, cd into the root of the project and run ```rspec```.
 
 * Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
