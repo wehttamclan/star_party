@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.bottom-weather-card').hide();
-  $('.top-btn').click(function(button) {
+  $('.select').click(function(button) {
     button.stopPropagation();
   });
   $(".top-weather-card").click(function(){
