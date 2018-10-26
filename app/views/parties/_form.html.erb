@@ -1,5 +1,8 @@
-<div class="search-field">
-<%= form_for @party do |f| %>
+<div class="landing-body">
+
+<div class="button-holder">
+<%= form_for @party, class: "form-inline" do |f| %>
+<div class="new-form">
   
   <div class="form-group">
     <%= f.text_field :title, placeholder: 'Title', class: "col-sm-2" %>
@@ -26,5 +29,7 @@
   <div class="form-group">
     <%= f.submit "Create a Star Party", class: "btn" %>
   </div>
+  </div>
 <% end %>
+</div>
 </div>
