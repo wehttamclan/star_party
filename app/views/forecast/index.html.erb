@@ -1,14 +1,23 @@
-<% cache("#{@forecast_results.zip_code}") do %>
+
   <h1 class="title">Forecast Results for <%= @forecast_results.zip_code %></h1>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
       <section class='top-weather-card'>
-        <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
-        <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
-
-        <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select'  %>
-
+        <div class"elements"
+        <div class='date-icon'>
+          <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
+          <%= image_tag("#{day_forecast.image_tag}", alt: "Photo of moon phase", class: 'img') %>
+        </div>
+          <div class="score-select">
+            <div class="score-wrap">
+              <h2>Star Score </h2>
+              <h2><%= day_forecast.star_party_rating %></h2>
+            </div>
+            <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select' %>
+          </div>
+        </div>
       </section>
+      <% cache("#{@forecast_results.zip_code}") do %>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">
           <table>
@@ -32,6 +41,6 @@
           </table>
         </div>
       </section>
+      <% end %>
     </div>
-  <% end %>
 <% end %>

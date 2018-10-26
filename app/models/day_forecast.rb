@@ -21,6 +21,14 @@ class DayForecast
     (10 - ((raw_score + 1) * 2.5)).round(2)
   end
 
+  def image_tag
+    moon = (@moon_phase * 10).round()
+    cloud = (@cloud_cover * 10).round()
+    cloud = 9 if cloud == 10
+    moon = 0 if cloud == 9
+    "#{cloud}#{moon}"
+  end
+
   private
 
   def moon_phase_converter
