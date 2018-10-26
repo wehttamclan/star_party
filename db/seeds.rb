@@ -22,3 +22,11 @@ Party.create(title: "Nebula Party",
           city: "Starville",
           state: "CO",
           zip_code: 80203)
+
+Party.create(title: "Meteor Party",
+          date: "07-07-2017",
+          description: "View Lovelace Meteor Shower",
+          street_address: "42 Universe Way",
+          city: "Douglastown",
+          state: "CO",
+          zip_code: 80203)
