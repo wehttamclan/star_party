@@ -25,9 +25,11 @@ You can also clone down this repo and play with the code!
 
 * Configuration
   To clone down and configure this project on your local, follow these steps in your terminal:
-  ```1. git clone git@github.com:BeccaHyland/star_party.git
+  ```
+     1. git clone git@github.com:BeccaHyland/star_party.git
      2. bundle install
-     3. rake db:create,migrate,seed  (Running seed is optional. If run, it will load a few fake parties for display and development purposes.)```
+     3. rake db:create,migrate,seed  (Running seed is optional. If run, it will load a few fake parties for display and development purposes.)
+     ```
 
 
 * How to run the test suite
