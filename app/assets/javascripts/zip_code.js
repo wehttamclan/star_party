@@ -5,6 +5,9 @@ $(document).ready(function(){
   $('.zip-search').click(function(button) {
     button.stopPropagation();
   });
+  $('.hidden-form').click(function(button) {
+    button.stopPropagation();
+  });
 
   $('.hidden-form').hide();
   $('.hidden-button').hide();

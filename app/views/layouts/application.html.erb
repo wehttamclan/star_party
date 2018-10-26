@@ -30,6 +30,11 @@
       </li>
     </div>
   </nav>
+    <div class="image-container">
+      <% cache("nasa-apod") do %>
+        <img src="<%= apod.source %>" class="apod" alt="<%= apod.description %>">
+      <% end %>
+    </div>
     <%= yield %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
