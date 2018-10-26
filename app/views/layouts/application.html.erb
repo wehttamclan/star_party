@@ -29,6 +29,13 @@
           <a class="nav-link" href="#">Log In / Sign Up</a>
       </li>
     </div>
+
+    <% flash.each do |type, message| %>
+    <div class="alert alert-dark" role="alert">
+      <%= message.html_safe %>
+    </div>
+    <% end %>
+
   </nav>
     <div class="image-container">
       <% cache("nasa-apod") do %>
@@ -36,10 +43,6 @@
       <% end %>
     </div>
 
-    <% flash.each do |type, message| %>
-      <%= content_tag :div, message.html_safe, class: type %>
-    <% end %>
-    
     <%= yield %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
