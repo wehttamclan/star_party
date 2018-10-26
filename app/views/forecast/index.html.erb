@@ -9,7 +9,7 @@
     <p class="rain-chance">Chance of Rain: <%= day_forecast.rain_chance %><p>
     <p class="moon-phase">Moon Phase: <%= day_forecast.moon_phase %><p>
     <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
-    <p class="select">"Choose this Day!"<p>
+    <p class="select"><%= button_to "Choose this Day!", new_party_path, method: :get  %><p>
   </div>
 <% end %>
 <% end %>
