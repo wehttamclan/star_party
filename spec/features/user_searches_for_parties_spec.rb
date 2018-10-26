@@ -64,4 +64,19 @@ describe 'visitor searches for parties' do
       expect(page).to_not have_content(past_party.description)
     end
   end
+
+  context 'with zip code corresponding to zero parties' do
+    it 'returns a message on index page' do
+      create(:party, zip_code: 80000)
+
+      visit '/'
+
+      fill_in :q_find, with: 81111
+      find(".find", visible: false).click
+
+      expect(current_path).to eq("/party_search")
+      expect(page).to_not have_css(".party")
+      expect(page).to have_content("No parties found in zipcode 81111. Try another search!")
+    end
+  end
 end
