@@ -1,15 +1,28 @@
 <% cache("#{@forecast_results.zip_code}") do %>
-<h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
-<p><%= @forecast_results.week_summary %></p>
-<% @forecast_results.day_forecast_objects.each do |day_forecast| %>
-  <div class="day">
-    <p class="time">Date: <%= day_forecast.time %><p>
-    <p class="summary">Summary: <%= day_forecast.summary %></p>
-    <p class="cloud-cover">Cloud Coverage: <%= day_forecast.cloud_cover %><p>
-    <p class="rain-chance">Chance of Rain: <%= day_forecast.rain_chance %><p>
-    <p class="moon-phase">Moon Phase: <%= day_forecast.moon_phase %><p>
-    <p class="rating">Star Party Raing: <%= day_forecast.star_party_rating %><p>
-    <p class="select"><%= button_to "Choose this Day!", new_party_path, method: :get, params: {date: day_forecast.time, zip_code: @forecast_results.zip_code}  %><p>
+  <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
+
+  <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
+  <div class='card-deck'>
+    <div class='card'>
+      <section class='top-card'>
+      <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
+        <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
+        <%= link_to "Select this Day", new_party_path, method: :get, params: {date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code} ,class: 'top-btn select' %>
+      </section>
+      <section class='bottom-card'>
+          <div class="day card-body">
+            <p class="summary card-text"><%= day_forecast.summary %></p>
+            <div class='column'>
+              <p class="rating">Star Party Rating: <%= day_forecast.star_party_rating %><p>
+              <p class="cloud-cover card-text">Cloud Coverage: <%= (day_forecast.cloud_cover * 100).to_i %>%</p>
+            </div>
+            <div class='column'>
+              <p class="rain-chance card-text">Chance of Rain: <%= (day_forecast.rain_chance * 100).to_i %>%</p>
+              <p class="moon-phase card-text">Moon Phase: <%= day_forecast.moon_phase %></p>
+            </div>
+          </div>
+        </section>
+    </div>
   </div>
-<% end %>
+  <% end %>
 <% end %>
