@@ -13,7 +13,7 @@ $(document).ready(function(){
   $('.hidden-button').hide();
   $(".zip-search").click(function(){
     if ($('.hidden-drop').height() > 0) {
-      $('.hidden-form').slideUp();
+      $(this).parents().siblings().children('.hidden-form').slideUp();
     }
     $(this).parent().children('.hidden-form').slideToggle(function(){
       $(this).children(".hidden-drop").focus();

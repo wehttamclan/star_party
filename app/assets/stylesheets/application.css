@@ -1,6 +1,9 @@
 body {
-
+   background-position: center;
+   background-attachment: fixed;
+   background-size: cover;
 }
+
 
 .landing-body{
   position: relative;
@@ -9,9 +12,9 @@ body {
 
 .button-holder {
   position: absolute;
-  top: -725%;
+  top: 300%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
 }
 
 .logo {
@@ -29,19 +32,6 @@ body {
 
 .sign-up {
   text-align: right;
-}
-
-.image-container {
-  width: auto;
-  overflow: hidden;
-  margin-bottom: -60px;
-  z-index: 1;
-  position: relative;
-}
-.image-container img {
-  height: 100vh;
-  left: 50%;
-  transform: translate(-35%, 0%);
 }
 
 .button-holder .btn {
@@ -125,5 +115,5 @@ body {
 }
 
 .card {
-
+  margin: 5px 15px 0px 15px;
 }
