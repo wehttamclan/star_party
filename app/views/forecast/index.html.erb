@@ -4,10 +4,10 @@
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
   <div class='card-deck'>
     <div class='card'>
-      <section class='top-card'
+      <section class='top-card'>
       <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
         <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
-        <%= link_to "Select this Day", new_party_path, class: 'top-btn' %>
+        <%= link_to "Select this Day", new_party_path, class: 'top-btn select' %>
       </section>
       <section class='bottom-card'>
           <div class="day card-body">
