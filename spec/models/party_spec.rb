@@ -14,5 +14,7 @@ describe Party, type: :model do
       expect(p.location).to eq(
         "#{p.street_address}, #{p.city}, #{p.state} #{p.zip_code}")
     end
+
+
   end
 end
