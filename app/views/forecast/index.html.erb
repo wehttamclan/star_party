@@ -3,9 +3,9 @@
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
       <section class='top-weather-card'>
-        <h5><%= day_forecast.time.strftime("%A, %b %d") %></h5>
+        <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
         <%= image_tag('sp_logo.png', alt: "Photo of moon phase", class: 'img') %>
-        <%= link_to "Select this Day", new_party_path, class: 'select' %>
+        <%= link_to "Select this Day", new_party_path, class: 'day select' %>
       </section>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">
@@ -16,16 +16,16 @@
               <th>Cloud Coverage</th>
             </tr>
             <tr>
-              <td><%= day_forecast.star_party_rating %></td>
-              <td><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
+              <td class="rating"><%= day_forecast.star_party_rating %></td>
+              <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
             </tr>
             <tr>
               <th>Chance of Rain</th>
               <th>Moon Phase</th>
             </tr>
             <tr>
-              <td><%= (day_forecast.rain_chance * 100).to_i %>%</td>
-              <td><%= day_forecast.moon_phase %></td>
+              <td class="rain-chance"><%= (day_forecast.rain_chance * 100).to_i %>%</td>
+              <td class="moon-phase"><%= day_forecast.moon_phase %></td>
             </tr>
           </table>
         </div>

@@ -10,9 +10,9 @@ feature "As an authenticated user" do
     visit forecast_path(zip_code: "80203") #delete this line once root page and button exist
 
     expect(page).to have_css('.time')
-    expect(page).to have_css('.day', count: 8)
+    expect(page).to have_css('.weather-card', count: 8)
 
-    within(first('.day')) do
+    within(first('.weather-card')) do
       expect(page).to have_css('.cloud-cover')
       expect(page).to have_css('.moon-phase')
       expect(page).to have_css('.rain-chance')
