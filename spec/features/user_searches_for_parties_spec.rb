@@ -76,7 +76,7 @@ describe 'visitor searches for parties' do
 
       expect(current_path).to eq("/")
       expect(page).to_not have_css(".party")
-      expect(page).to have_content("No parties found. Try another search!")
+      expect(page).to have_content("No parties found in 81111. Try another search!")
     end
   end
 end
