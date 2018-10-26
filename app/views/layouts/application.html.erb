@@ -35,6 +35,11 @@
         <img src="<%= apod.source %>" class="apod" alt="<%= apod.description %>">
       <% end %>
     </div>
+
+    <% flash.each do |type, message| %>
+      <%= content_tag :div, message.html_safe, class: type %>
+    <% end %>
+    
     <%= yield %>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
