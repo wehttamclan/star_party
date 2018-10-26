@@ -1,8 +1,7 @@
 <% cache("#{@forecast_results.zip_code}") do %>
   <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
-
-  <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
   <div class='card-deck'>
+  <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='card'>
       <section class='top-card'>
       <h5 class="time"><%= day_forecast.time.strftime("%A, %b %d") %></h5>
@@ -23,6 +22,6 @@
           </div>
         </section>
     </div>
-  </div>
   <% end %>
+  </div>
 <% end %>

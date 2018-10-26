@@ -9,7 +9,7 @@ body {
 
 .button-holder {
   position: absolute;
-  top: -900%;
+  top: -725%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -27,14 +27,19 @@ body {
   z-index: 10;
 }
 
+.sign-up {
+  text-align: right;
+}
+
 .image-container {
-  max-height: 675px;
   width: auto;
   overflow: hidden;
   margin-bottom: -60px;
+  z-index: 1;
+  position: relative;
 }
 .image-container img {
-  height: 675px;
+  height: 100vh;
   left: 50%;
   transform: translate(-35%, 0%);
 }
@@ -117,4 +122,8 @@ body {
   font-family: 'Athiti', sans-serif;
   color: #EAE0D5;
   background-color: #202030;
+}
+
+.card {
+
 }
