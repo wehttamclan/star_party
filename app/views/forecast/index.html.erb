@@ -1,4 +1,3 @@
-
   <h1 class="title">Forecast Results for <%= @forecast_results.zip_code %></h1>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
@@ -16,7 +15,6 @@
           </div>
       </section>
 
-      <% cache("#{@forecast_results.zip_code}") do %>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">
           <table>
@@ -40,6 +38,6 @@
           </table>
         </div>
       </section>
-      <% end %>
+
     </div>
 <% end %>
