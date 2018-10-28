@@ -19,5 +19,8 @@ feature 'As a user' do
     fill_in :party_city, with: 'Denver'
     select 'Colorado', from: :state
 
+    click_on 'Create a Star Party'
+
+    expect(current_path).to eq '/parties/1'
   end
 end
