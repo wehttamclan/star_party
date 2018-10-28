@@ -13,6 +13,9 @@ class PartiesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   def party_params
     params.require(:party).permit(:title, :description, :date, :street_address, :city, :zip_code)
