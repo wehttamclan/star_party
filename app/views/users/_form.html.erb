@@ -1,0 +1,40 @@
+<div class="landing-body">
+
+<div class="button-holder">
+<%= form_for @user, class: "form-inline" do |f| %>
+<div class="new-form">
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: 'Name', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :username, placeholder: 'Username', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :email, placeholder: 'Email', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :phone_number, placeholder: 'Phone Number', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :zip_code, placeholder: 'Zip Code', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+  </div>
+  <div class="field">
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
+  </div>
+  </br>
+  <div class="create-button">
+    <%= f.submit "Create User", class: "btn" %>
+  </div>
+  </div>
+<% end %>
+</div>
+</div>
