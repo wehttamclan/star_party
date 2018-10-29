@@ -29,13 +29,5 @@ describe ForecastFacade do
       end
     end
 
-    context '#week_summary' do
-      it 'returns the summary for the week' do
-        summary = subject.week_summary
-
-        expect(summary).to be_a String
-      end
-    end
-
   end
 end

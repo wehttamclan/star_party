@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   get "/party_search", to: 'party_search#index'
 
+  resources :parties, only: [:new, :create, :show]
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   
@@ -14,7 +15,5 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'dashboard#show'
 
   resources :users, only: [:new, :create]
-
-  resources :parties, only: [:new, :create]
 
 end
