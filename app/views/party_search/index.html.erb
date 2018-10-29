@@ -1,10 +1,12 @@
 <h3>Star Parties in zip code <%= @party_search_result.parties.first[:zip_code] %></h3>
 
 <% @party_search_result.parties.each do |party| %>
-  <ul class="party">
+  <div class="party ">
     <h5 class="title"><%= party.title %></h5>
-    <ul class="description"><strong>What: </strong><%= party.description %></ul>
-    <ul class="date"><strong>When: </strong><%= party.view_date %></ul>
-    <ul class="location"><strong>Where: </strong><%= party.location %></ul>
-  </ul>
+    <div class="index-card">
+      <div class="party"><strong>What: </strong><%= party.description %></div>
+      <div class="party"><strong>When: </strong><%= party.view_date %></div>
+      <div class="party"><strong>Where: </strong><%= party.location %></div>
+    </div>
+  </div>
 <% end %>
