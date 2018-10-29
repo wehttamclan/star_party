@@ -116,7 +116,7 @@ body {
 }
 
 .title {
-  font-size: 32px;
+  font-size: 28px;
   background-color: #202030;
   color: #EAE0D5;
   border-radius: 10px;
@@ -127,6 +127,10 @@ body {
   width: auto;
   text-align: center;
   z-index: 10;
+}
+
+.title p {
+  font-size: 19px;
 }
 
 .top-weather-card {
