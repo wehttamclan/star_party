@@ -7,7 +7,7 @@ describe 'nasa api endpoints' do
     expect(apod_json[:title]).to be
     if apod_json[:copyright]
       expect(apod_json[:copyright]).to be
-    end 
+    end
     expect(apod_json[:hdurl]).to be
   end
 end
