@@ -1,5 +1,8 @@
 
-  <h1 class="title">Forecast Results for <%= @forecast_results.zip_code %></h1>
+<div class='title'>
+  <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
+  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a></p>
+</div>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
       <section class='top-weather-card'>
@@ -16,7 +19,6 @@
           </div>
       </section>
 
-      <% cache("#{@forecast_results.zip_code}") do %>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">
           <table>
@@ -40,6 +42,6 @@
           </table>
         </div>
       </section>
-      <% end %>
+
     </div>
 <% end %>

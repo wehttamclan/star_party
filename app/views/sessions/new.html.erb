@@ -1,0 +1,20 @@
+<h1 class="title">Login Here!</h1>
+
+<%= form_tag login_path do %>
+  <div class="field">
+    <%= text_field_tag :username %>
+  </div>
+  </br>
+  <div class="field">
+    <%= text_field_tag :password %>
+  </div>
+  </br>
+  <div class="field">
+    <%= submit_tag "Submit", class: "btn" %>
+  </div>
+<% end %>
+
+<h3 class="title">Don't Have An Account?
+  <br>
+  <a class="register-Here" href="/users/new">Register Here</a>
+</h3>
