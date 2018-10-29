@@ -6,7 +6,10 @@ Rails.application.routes.draw do
 
   get "/party_search", to: 'party_search#index'
 
-  get '/login', to: 'login#show'
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  
+  get '/logout', to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#show'
 

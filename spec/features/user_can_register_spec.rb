@@ -19,7 +19,7 @@ describe "As a visitor" do
       expect(current_path).to eq("/users/new")
 
       fill_in "Name", with: user_info[:name]
-      fill_in "Userame", with: user_info[:username]
+      fill_in "Username", with: user_info[:username]
       fill_in "Email", with: user_info[:email]
       fill_in "Phone Number", with: user_info[:phone_number]
       fill_in "Zip Code", with: user_info[:zip_code]
