@@ -4,13 +4,13 @@ class Party < ApplicationRecord
                         :zip_code
 
   geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+  after_validation :geocode
 
   def address
     [street_address, city, zip_code, state].compact.join(", ")
   end
 
-  def address_changed?
+  def address_changed
     street_address_changed? || city_changed? || zip_code_changed? || state_changed?
   end
 
