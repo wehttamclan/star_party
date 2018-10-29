@@ -9,7 +9,6 @@ class User < ApplicationRecord
 
   has_secure_password
 
-
   enum role: %w(user admin)
 
   def self.create_with_omniauth(auth)
