@@ -7,6 +7,8 @@ class User < ApplicationRecord
                         :phone_number,
                         :zip_code
 
+  has_many :parties
+
   has_secure_password
 
   enum role: %w(user admin)

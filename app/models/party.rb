@@ -3,6 +3,8 @@ class Party < ApplicationRecord
                         :date,
                         :zip_code
 
+  belongs_to :host, class_name: 'User'
+
 
   def view_date
     self.date.strftime('%b. %-d, %Y')
