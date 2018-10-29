@@ -9,11 +9,12 @@ class PartiesController < ApplicationController
       redirect_to party_path(party)
     else
       flash[:notice] = 'Something went wrong.'
-      render :new
+      redirect_to new_party_path(party_params)
     end
   end
 
   def show
+    @party = Party.find(params[:id])
   end
 
   private

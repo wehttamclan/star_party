@@ -27,7 +27,7 @@
     <%= select_tag :state, options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2 form-field" %>
   </div>
 
-    <%= f.hidden_field :date, value: @party.date %>
+  <%= f.hidden_field :date, value: @party.date %>
 
   <div class="create-button">
     <%= f.submit "Create a Star Party", class: "btn" %>
