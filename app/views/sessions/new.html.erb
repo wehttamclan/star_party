@@ -13,7 +13,9 @@
     <%= submit_tag "Submit", class: "btn" %>
   </div>
 <% end %>
-
+<br>
+<%= link_to "Login with Google", "/auth/google_oauth2", :class => "nav-link", method: :get %>
+<br>
 <h3 class="title">Don't Have An Account?
   <br>
   <a class="register-Here" href="/users/new">Register Here</a>
