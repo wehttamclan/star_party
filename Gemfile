@@ -38,6 +38,7 @@ gem 'figaro'
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'awesome_print'
 gem 'area'
+gem 'omniauth-google-oauth2'
 gem 'twilio-ruby'
 
 group :development, :test do
