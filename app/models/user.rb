@@ -5,7 +5,11 @@ class User < ApplicationRecord
   validates_presence_of :name,
                         :email
 
+  has_many :parties
+
   has_secure_password
+
+  enum role: %w(user admin)
 
   def self.create_with_omniauth(auth)
     create! do |user|
@@ -14,5 +18,6 @@ class User < ApplicationRecord
       user.password = auth[:uid]
     end
   end
+
 
 end
