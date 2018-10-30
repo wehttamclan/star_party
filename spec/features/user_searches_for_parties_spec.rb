@@ -5,10 +5,14 @@ describe 'visitor searches for parties' do
     it 'returns all parties' do
       create_list(:party, 5)
 
-      visit '/'
+      VCR.use_cassette("visit root") do
+        visit '/'
+      end
 
       fill_in :q_find, with: 80203
-      find(".find", visible: false).click
+      VCR.use_cassette("click find to find") do
+        find(".find", visible: false).click
+      end
 
       expect(current_path).to eq("/party_search")
       expect(page).to have_css(".party-card", count: 5)
@@ -51,10 +55,14 @@ describe 'visitor searches for parties' do
                 zip_code: 80203,
                 host_id: host.id)
 
-      visit '/'
+      VCR.use_cassette("visit root") do
+        visit '/'
+      end
 
       fill_in :q_find, with: 80203
-      find(".find", visible: false).click
+      VCR.use_cassette("find to not show past parties") do
+        find(".find", visible: false).click
+      end
 
       expect(page).to have_css(".party-card", count: 2)
 
@@ -73,10 +81,14 @@ describe 'visitor searches for parties' do
     it 'returns a message on index page' do
       create(:party, zip_code: 80000)
 
-      visit '/'
+      VCR.use_cassette("visit root") do
+        visit '/'
+      end
 
       fill_in :q_find, with: 81111
-      find(".find", visible: false).click
+      VCR.use_cassette("click another other find") do
+        find(".find", visible: false).click
+      end
 
       expect(current_path).to eq("/")
       expect(page).to_not have_css(".party")
