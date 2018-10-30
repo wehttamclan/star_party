@@ -3,9 +3,8 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by_username(params[:username])
+    user = User.find_by_email(params[:email])
     if user && user.authenticate(params[:password])
-      user = User.find_by(username: params[:username])
       session[:user_id] = user.id
       redirect_to "/dashboard"
     elsif auth_hash
