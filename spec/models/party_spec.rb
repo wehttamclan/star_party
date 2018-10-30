@@ -7,6 +7,12 @@ describe Party, type: :model do
     it {should validate_presence_of(:zip_code)}
   end
 
+  describe 'relationships' do
+    it { should belong_to(:host) }
+    it { should have_many(:user_parties) }
+    it { should have_many(:users), through: :user_parties }
+  end
+
   describe 'instance methods' do
     it '#location' do
       p = create(:party)
@@ -15,6 +21,21 @@ describe Party, type: :model do
         "#{p.street_address}, #{p.city}, #{p.state} #{p.zip_code}")
     end
 
+    context '#attendance' do
+      it 'should set or delete user relationship to party' do
+        party = create(:party)
+        user = create(:user)
 
+        expect(party.users.first).to be(nil)
+
+        party.attendance(user.id, "attend")
+
+        expect(party.users.first).to eq(user)
+
+        party.attendance(user.id, "cancel")
+
+        expect(party.users.first).to be(nil)
+      end
+    end
   end
 end
