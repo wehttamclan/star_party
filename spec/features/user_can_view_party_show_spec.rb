@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature 'As a authenticated user' do
+feature 'As an authenticated user' do
   context 'I can visit a party show' do
     scenario 'and click to attend the party' do
       user = create(:user)
@@ -10,7 +10,7 @@ feature 'As a authenticated user' do
       visit "/parties/#{fun_party.id}"
 
       expect(page).to have_content(fun_party.title)
-      expect(page).to have_content("Date: #{fun_party.date}")
+      expect(page).to have_content("Date: #{fun_party.date.strftime('%A, %b %d')}")
       expect(page).to have_content(fun_party.description)
       expect(page).to have_content("Hosted By: #{fun_party.host.name}")
 
