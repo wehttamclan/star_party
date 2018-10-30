@@ -6,7 +6,7 @@
   <li class='address'>Address: <%= @party.street_address %></li>
   <li class='city'>City: <%= @party.city %></li>
   <li class='zip-code'><%= @party.zip_code %></li>
-  <li class='host'>Hosted by: <%= @party.host.name %></li>
+  <li class='host'>Hosted By: <%= @party.host.name %></li>
 </ul>
 
 <% if current_user.parties.include?(@party) %>
