@@ -5,7 +5,6 @@ body {
    background-position: center;
 }
 
-
 .landing-body{
   position: relative;
   text-align: center;
@@ -307,3 +306,19 @@ tr {
 p {
   text-align: center;
 }
+
+.party-card {
+  font-family: 'Athiti', sans-serif;
+  font-size: 20px;
+  color: #EAE0D5;
+  background-color: #455777;
+  border-radius: 7px;
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  box-shadow: inset -1px 2px 4px #161621;
+  justify-content: space-between;
+  }
+
+  .party-card ul {
+    list-style-type: none;
+  }

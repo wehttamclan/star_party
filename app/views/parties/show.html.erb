@@ -1,22 +1,26 @@
 <h1><%= @party.title %><h1>
 
-<ul class='none'>
-  <li class='date'>Date: <%= @party.date.strftime('%A, %b %d') %></li>
-  <li class='description'><%= @party.description %></li>
-  <% if current_user %>
-    <li class='address'>Address: <%= @party.street_address %>, <%= @party.city %></li>
-    <li class='host'>Hosted By: <%= @party.host.name %></li>
-  <% end %>
-</ul>
+<div class='party-card'>
+  <ul>
+    <li class='date'>Date: <%= @party.date.strftime('%A, %b %d') %></li>
+    <li class='description'><%= @party.description %></li>
+    <% if current_user %>
+      <li class='address'>Address: <%= @party.street_address %>, <%= @party.city %></li>
+      <li class='host'>Hosted By: <%= @party.host.name %></li>
+    <% end %>
+  </ul>
+</div>
 
-<% if current_user %>
-  <% if current_user.parties.include?(@party) %>
-    <p>You are attending this party.</p>
-    <%= link_to "Text a friend!", text_path(party_id: @party), class: 'btn' %>
-    <%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'btn' %>
+<div>
+  <% if current_user %>
+    <% if current_user.parties.include?(@party) %>
+      <p>You are attending this party.</p>
+      <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'login-button' %></p>
+      <p><%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'login-button' %></p>
+    <% else %>
+      <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button' %></p>
+    <% end %>
   <% else %>
-    <%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'btn' %>
+    <p>Please log in to view party details and to rsvp.</p>
   <% end %>
-<% else %>
-  <p>Please log in to view party details and to rsvp.</p>
-<% end %>
+</div>
