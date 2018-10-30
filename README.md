@@ -43,18 +43,18 @@ You can also clone down this repo and play with the code!
 * Services (job queues, cache servers, search engines, etc.)
 
 
-#Api endpoints
-##RESTful API routes
-####/api/v1/parties/:id
+# Api endpoints
+## RESTful API routes
+#### /api/v1/parties/:id
 * Return data from an individual Star Party. 
 
-####/api/v1/parties
+#### /api/v1/parties
 * Return data from all Star Party.
 
-##Search API routes
+## Search API routes
 Use search parameters to find specific Star Parties.
-####/api/v1/parties/find
+#### /api/v1/parties/find
 * Find data for an individual Star Party matching search parameters.
 
-####/api/v1/parties/find_all
+#### /api/v1/parties/find_all
 * Find data for all Star Parties matching search parameters.
