@@ -24,12 +24,12 @@
           <table>
             <p class="summary weather-card-body"><%= day_forecast.summary %></p>
             <tr>
-              <th>Star Party Rating</th>
               <th>Cloud Coverage</th>
+              <th>(placeholder moon info TOP)</th>
             </tr>
             <tr>
-              <td class="rating"><%= day_forecast.star_party_rating %></td>
               <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
+              <td class="moon-info">(placeholder moon info BOTTOM)</td>
             </tr>
             <tr>
               <th>Chance of Rain</th>
