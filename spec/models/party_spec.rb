@@ -28,11 +28,11 @@ describe Party, type: :model do
 
         expect(party.users.first).to be(nil)
 
-        party.attendance(user.id, "attend")
+        party.attendance(user, "attend")
 
         expect(party.users.first).to eq(user)
 
-        party.attendance(user.id, "cancel")
+        party.attendance(user, "cancel")
 
         expect(party.users.first).to be(nil)
       end

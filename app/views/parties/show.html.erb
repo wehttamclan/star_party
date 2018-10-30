@@ -13,5 +13,5 @@
   <button disabled>You are attending this party</button>
   <%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'btn' %>
 <% else %>
-  <%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'btn' %>
+  <%= link_to "Attend", party_path(@party, attendance: "attend", user: current_user), class: 'btn' %>
 <% end %>

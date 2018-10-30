@@ -17,4 +17,12 @@ class Party < ApplicationRecord
     "#{self.street_address}, #{self.city}, #{self.state} #{self.zip_code}"
   end
 
+  def attendance(user, rsvp)
+    if rsvp == 'attend'
+      self.users << user
+    elsif rsvp == 'cancel'
+      user_party = UserParty.find(user_id: user, party_id: self)
+      user_party.first.delete
+    end
+  end
 end
