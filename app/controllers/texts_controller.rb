@@ -1,4 +1,4 @@
 class TextsController < ApplicationController
-  def create
+  def new
   end
-end 
+end

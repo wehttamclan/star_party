@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
 
   get '/dashboard', to: 'dashboard#show'
-  get '/text', to: 'texts#create'
+  get '/text', to: 'texts#new'
 
   resources :users, only: [:new, :create]
 
