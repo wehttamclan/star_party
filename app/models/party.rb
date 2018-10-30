@@ -5,6 +5,9 @@ class Party < ApplicationRecord
 
   belongs_to :host, class_name: 'User'
 
+  has_many :user_parties
+  has_many :users, through: :user_parties
+
 
   def view_date
     self.date.strftime('%b. %-d, %Y')

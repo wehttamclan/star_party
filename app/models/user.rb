@@ -6,6 +6,7 @@ class User < ApplicationRecord
                         :email
 
   has_many :parties
+  has_many :user_parties
 
   has_secure_password
 
