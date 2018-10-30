@@ -13,8 +13,8 @@ class TwilioController < ApplicationController
     from =
 
     client.messages.create(
-      from: ENV["twilio_phone_number"]
-      to: '+17203620696'
+      from: ENV["twilio_phone_number"],
+      to: '+17203620696',
       body: "Test Twilio Message from app"
     )
   end
