@@ -24,7 +24,7 @@ describe 'visitor searches for parties' do
     it 'does not return past parties' do
       host = create(:user)
 
-      today_party = Party.create(title: "Comet Party",
+      today_party = create(:party, title: "Comet Party",
                 date: Date.today,
                 description: "View Halley's Comet",
                 street_address: "100 Host Place",
@@ -33,7 +33,7 @@ describe 'visitor searches for parties' do
                 zip_code: 80203,
                 host_id: host.id)
 
-      future_party = Party.create(title: "Nebula Party",
+      future_party = create(:party, title: "Nebula Party",
                 date: "11-11-2018",
                 description: "View Turing Nebula",
                 street_address: "888 Galaxy Road",
@@ -42,7 +42,7 @@ describe 'visitor searches for parties' do
                 zip_code: 80203,
                 host_id: host.id)
 
-      past_party = Party.create(title: "Meteor Party",
+      past_party = create(:party, title: "Meteor Party",
                 date: "07-07-2017",
                 description: "View Lovelace Meteor Shower",
                 street_address: "42 Universe Way",
