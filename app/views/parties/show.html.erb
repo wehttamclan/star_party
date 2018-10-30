@@ -12,6 +12,7 @@
 <% if current_user %>
   <% if current_user.parties.include?(@party) %>
     <p>You are attending this party.</p>
+    <%= link_to "Text a friend!", text_path(party_id: @party), class: 'btn' %>
     <%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'btn' %>
   <% else %>
     <%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'btn' %>
