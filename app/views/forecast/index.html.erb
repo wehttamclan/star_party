@@ -1,7 +1,7 @@
 <% cache"#{@forecast_results.zip_code}" do %>
 <div class='title'>
   <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
-  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a></p>
+  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a> | Max Star Score: 10</p>
 </div>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
