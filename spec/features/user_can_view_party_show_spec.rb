@@ -17,7 +17,6 @@ feature 'As a authenticated user' do
       click_on("Attend")
 
       expect(current_path).to eq("/parties/#{fun_party.id}")
-      expect(page).to_not have_content("Attend"), exact_text: true
       expect(page).to have_content("You are attending this party.")
       expect(page).to have_content("Cancel Attendance")
     end

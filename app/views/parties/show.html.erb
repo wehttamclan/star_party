@@ -1,7 +1,7 @@
 <h1><%= @party.title %><h1>
 
 <ul class='none'>
-  <li class='date'>Date: <%= @party.date %></li>
+  <li class='date'>Date: <%= @party.date.strftime('%A, %b %d') %></li>
   <li class='description'><%= @party.description %></li>
   <li class='address'>Address: <%= @party.street_address %></li>
   <li class='city'>City: <%= @party.city %></li>
@@ -10,8 +10,8 @@
 </ul>
 
 <% if current_user.parties.include?(@party) %>
-  <button disabled>You are attending this party</button>
+  <p>You are attending this party</p>
   <%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'btn' %>
 <% else %>
-  <%= link_to "Attend", party_path(@party, attendance: "attend", user: current_user), class: 'btn' %>
+  <%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'btn' %>
 <% end %>
