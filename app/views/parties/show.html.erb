@@ -1,0 +1,17 @@
+<h1><%= @party.title %><h1>
+
+<ul class='none'>
+  <li class='date'>Date: <%= @party.date %></li>
+  <li class='description'><%= @party.description %></li>
+  <li class='address'>Address: <%= @party.street_address %></li>
+  <li class='city'>City: <%= @party.city %></li>
+  <li class='zip-code'><%= @party.zip_code %></li>
+  <li class='host'>Hosted by: <%= @party.host.name %></li>
+</ul>
+
+<% if current_user.parties.include?(@party) %>
+  <button disabled>You are attending this party</button>
+  <%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'btn' %>
+<% else %>
+  <%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'btn' %>
+<% end %>
