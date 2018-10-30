@@ -9,12 +9,18 @@ describe "As a visitor" do
                     zip_code: 80202
                   }
 
-      visit "/"
+      VCR.use_cassette("visit root") do
+        visit "/"
+      end
 
-      click_on("Log In / Sign Up")
+      VCR.use_cassette("click login") do
+        click_on("Log In / Sign Up")
+      end
       expect(current_path).to eq("/login")
 
-      click_on("Register Here")
+      VCR.use_cassette("click register here") do
+        click_on("Register Here")
+      end
       expect(current_path).to eq("/users/new")
 
       fill_in "Name", with: user_info[:name]
@@ -24,7 +30,9 @@ describe "As a visitor" do
       fill_in "Password", with: "abc123"
       fill_in "Confirm Password", with: "abc123"
 
-      click_on("Create User")
+      VCR.use_cassette("click create user") do
+        click_on("Create User")
+      end 
 
       expect(current_path).to eq("/dashboard")
 

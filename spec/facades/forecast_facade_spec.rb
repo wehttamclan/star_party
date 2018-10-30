@@ -14,7 +14,9 @@ describe ForecastFacade do
   context 'instance methods' do
     context '#day_forecast_objects' do
       it 'returns dark sky json data' do
-        results = subject.day_forecast_objects
+        results = VCR.use_cassette("day_forecast_objects from facade2") do
+          subject.day_forecast_objects
+        end
 
         expect(results.length).to eq(8)
         expect(results.first).to be_a DayForecast

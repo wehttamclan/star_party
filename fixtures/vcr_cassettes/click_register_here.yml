@@ -1,0 +1,69 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.nasa.gov/planetary/apod?api_key=H83oWqeipEzg3juBhVXL6K5sh8HU4vujq7mD1gq7
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Tue, 30 Oct 2018 20:26:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Remaining:
+      - '923'
+      Via:
+      - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+      Age:
+      - '0'
+      X-Cache:
+      - MISS
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"copyright":"Yin Hao","date":"2018-10-30","explanation":"Meteors have
+        been shooting out from the constellation of Orion.  This was expected, as
+        October is the time of year for the Orionids Meteor Shower.  Pictured here,
+        over two dozen meteors were caught in successively added exposures last October
+        over Wulan Hada volcano in Inner Mongolia, China. The featured image shows
+        multiple meteor streaks that can all be connected to a single small region
+        on the sky called the radiant, here visible just above and to the left of
+        the belt of Orion,  The Orionids meteors started as sand sized bits expelled
+        from Comet Halley during one of its trips to the inner Solar System.  Comet
+        Halley is actually responsible for two known meteor showers, the other known
+        as the Eta Aquarids and visible every May.  An Orionids image featured on
+        APOD one year ago today from the same location shows the same car.  Next month,
+        the Leonids Meteor Shower from Comet Tempel-Tuttle should also result in some
+        bright meteor streaks.   Follow APOD on: Facebook,  Instagram, Reddit, or
+        Twitter","hdurl":"https://apod.nasa.gov/apod/image/1810/Orionids_Hao_2324.jpg","media_type":"image","service_version":"v1","title":"Orionids
+        Meteors over Inner Mongolia","url":"https://apod.nasa.gov/apod/image/1810/Orionids_Hao_960.jpg"}
+
+'
+    http_version: 
+  recorded_at: Tue, 30 Oct 2018 20:26:16 GMT
+recorded_with: VCR 4.0.0
