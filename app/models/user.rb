@@ -5,9 +5,9 @@ class User < ApplicationRecord
   validates_presence_of :name,
                         :email
 
-  has_many :parties
-  has_many :user_parties
-  has_many :parties, through: :user_parties
+  has_many :parties, dependent: :destroy
+  has_many :user_parties, dependent: :destroy
+  has_many :parties, through: :user_parties, dependent: :destroy
 
   has_secure_password
 

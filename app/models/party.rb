@@ -5,8 +5,8 @@ class Party < ApplicationRecord
 
   belongs_to :host, class_name: 'User'
 
-  has_many :user_parties
-  has_many :users, through: :user_parties
+  has_many :user_parties, dependent: :destroy
+  has_many :users, through: :user_parties, dependent: :destroy
 
 
   def view_date
