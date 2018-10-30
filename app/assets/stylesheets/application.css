@@ -272,7 +272,9 @@ body {
 }
 
 .apod-info {
-
+ position: fixed;
+ bottom: 0;
+ margin: auto;
 }
 
 table {
