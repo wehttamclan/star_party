@@ -23,6 +23,8 @@ ActiveRecord::Schema.define(version: 2018_10_30_000512) do
     t.string "city"
     t.string "state"
     t.integer "zip_code"
+    t.float "latitude"
+    t.float "longitude"
     t.bigint "host_id"
     t.index ["host_id"], name: "index_parties_on_host_id"
   end

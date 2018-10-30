@@ -270,6 +270,21 @@ body {
   margin-top: 30px;
 }
 
+.apod-info {
+ position: fixed;
+ bottom: 0;
+ margin-left: 50%;
+}
+
+.apod-wrapper {
+  margin: auto;
+}
+
+.pearl {
+  color: #EAE0D5;
+  text-align: right;
+}
+
 table {
   margin: auto;
   caption-side: top;

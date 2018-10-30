@@ -1,6 +1,6 @@
 <div class="landing-body">
   <div class="cont">
-    
+
   </div>
   </br>
   </br>
@@ -10,7 +10,7 @@
       <div class="form-group search-field">
         <div>
           <%= button_tag "Find a Star Party!", class: "btn zip-search", type: 'button' %>
-          
+
           <div class="hidden-form">
             <%= text_field_tag :q_find, nil, placeholder: 'Enter A Zip Code' , class: "form-control hidden-drop" %>
             <%= button_tag "Search", class: "btn find-a-party form-control hidden-button find" %>
@@ -32,7 +32,13 @@
 
         </div>
       </div>
-      
+
     <% end %>
   </div>
+</div>
+  <div class="apod-info">
+    <h5 class="pearl">About This Photo:
+      <br>
+      <a class="apod-link" href="https://apod.nasa.gov/apod/astropix.html">Learn More with NASA</a>
+    </h5>
 </div>
