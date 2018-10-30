@@ -1,7 +1,7 @@
 <% cache"#{@forecast_results.zip_code}" do %>
 <div class='title'>
   <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
-  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a> | Max Star Score: 10</p>
+  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a></p>
 </div>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
@@ -13,7 +13,7 @@
           <div class="score-select">
             <div class="score-wrap">
               <h2>Star Score </h2>
-              <h2><%= day_forecast.star_party_rating %></h2>
+              <h2><%= day_forecast.star_party_rating %><sub><sub>/10</sub></sub></h2>
             </div>
             <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select' %>
           </div>
