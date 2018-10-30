@@ -5,6 +5,10 @@ body {
    background-position: center;
 }
 
+.sub {
+  font-size: 18px;
+}
+
 .landing-body{
   position: relative;
   text-align: center;

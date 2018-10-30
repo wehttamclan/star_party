@@ -13,7 +13,7 @@
           <div class="score-select">
             <div class="score-wrap">
               <h2>Star Score </h2>
-              <h2><%= day_forecast.star_party_rating %><sub><sub>/10</sub></sub></h2>
+              <h2><%= day_forecast.star_party_rating %><span class="sub"> / 10</span></h2>
             </div>
             <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select' %>
           </div>
@@ -25,19 +25,19 @@
             <p class="summary weather-card-body"><%= day_forecast.summary %></p>
             <tr>
               <th>Cloud Coverage</th>
-              <th>(placeholder moon info TOP)</th>
-            </tr>
-            <tr>
-              <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
-              <td class="moon-info">(placeholder moon info BOTTOM)</td>
-            </tr>
-            <tr>
-              <th>Chance of Rain</th>
               <th>Moon Phase</th>
             </tr>
             <tr>
-              <td class="rain-chance"><%= (day_forecast.rain_chance * 100).to_i %>%</td>
+              <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
               <td class="moon-phase"><%= day_forecast.moon_phase %></td>
+            </tr>
+            <tr>
+              <th>Chance of Rain</th>
+              <th>(moon info TOP)</th>
+            </tr>
+            <tr>
+              <td class="rain-chance"><%= (day_forecast.rain_chance * 100).to_i %>%</td>
+              <td class="moon-info">(moon info BOTTOM)</td>
             </tr>
           </table>
         </div>
