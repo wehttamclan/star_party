@@ -4,10 +4,15 @@ feature 'As a user' do
   scenario 'fills out new party form' do
     user = create(:user)
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-    visit forecast_path(zip_code: '80203')
+
+    VCR.use_cassette("visit forecast path as user") do
+      visit forecast_path(zip_code: '80203')
+    end
 
     within(first('.weather-card')) do
-      click_on 'Select this Day'
+      VCR.use_cassette("click select this day") do
+        click_on 'Select this Day'
+      end
     end
 
     expect(current_path).to eq '/parties/new'
@@ -21,7 +26,9 @@ feature 'As a user' do
     fill_in :party_city, with: 'Denver'
     select 'Colorado', from: :state
 
-    click_on 'Create a Star Party'
+    VCR.use_cassette("click create a star party", :allow_unused_http_interactions => false) do
+      click_on 'Create a Star Party'
+    end
 
     expect(current_path).to eq '/parties/1'
   end

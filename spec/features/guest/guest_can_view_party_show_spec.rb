@@ -5,7 +5,9 @@ feature 'As an guest user' do
     scenario 'and view party details' do
       fun_party = create(:party)
 
-      visit "/parties/#{fun_party.id}"
+      VCR.use_cassette("visit party not logged in") do
+        visit "/parties/#{fun_party.id}"
+      end
 
       expect(page).to have_content(fun_party.title)
       expect(page).to have_content("Date: #{fun_party.date.strftime('%A, %b %d')}")

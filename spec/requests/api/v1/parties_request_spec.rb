@@ -4,7 +4,9 @@ describe "Parties API" do
   it "sends a list of parties" do
     create_list(:party, 3)
 
-    get '/api/v1/parties'
+    VCR.use_cassette("get all parties api") do
+      get '/api/v1/parties'
+    end
 
     expect(response).to be_successful
 
@@ -16,7 +18,9 @@ describe "Parties API" do
   it "can get one party by its id" do
     id = create(:party).id
 
-    get "/api/v1/parties/#{id}"
+    VCR.use_cassette("visit party show api") do
+      get "/api/v1/parties/#{id}"
+    end
 
     party = JSON.parse(response.body)
 
@@ -28,7 +32,9 @@ describe "Parties API" do
     party1, party2 = create_list(:party, 2, zip_code: 80000)
     party3 = create(:party, zip_code: 70000)
 
-    get "/api/v1/parties/find_all?zip_code=#{party1.zip_code}"
+    VCR.use_cassette("return parties in certain zip code api") do
+      get "/api/v1/parties/find_all?zip_code=#{party1.zip_code}"
+    end 
 
     expect(response).to be_successful
 
