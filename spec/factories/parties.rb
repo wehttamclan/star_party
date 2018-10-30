@@ -7,5 +7,6 @@ FactoryBot.define do
     city { "Sampleville" }
     state { "CO"}
     zip_code { 80203 }
+    association :host, factory: :user
   end
 end

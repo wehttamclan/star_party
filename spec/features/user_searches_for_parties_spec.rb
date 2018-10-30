@@ -11,9 +11,9 @@ describe 'visitor searches for parties' do
       find(".find", visible: false).click
 
       expect(current_path).to eq("/party_search")
-      expect(page).to have_css(".party", count: 5)
+      expect(page).to have_css(".party-card", count: 5)
 
-      within(first(".party")) do
+      within(first(".party-card")) do
         expect(page).to have_css(".title")
         expect(page).to have_css(".date")
         expect(page).to have_css(".description")
@@ -52,7 +52,7 @@ describe 'visitor searches for parties' do
       fill_in :q_find, with: 80203
       find(".find", visible: false).click
 
-      expect(page).to have_css(".party", count: 2)
+      expect(page).to have_css(".party-card", count: 2)
 
       expect(page).to have_content(today_party.title)
       expect(page).to have_content(today_party.description)

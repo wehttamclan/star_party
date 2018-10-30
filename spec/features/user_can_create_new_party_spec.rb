@@ -2,6 +2,8 @@ require 'rails_helper'
 
 feature 'As a user' do
   scenario 'fills out new party form' do
+    user = create(:user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit forecast_path(zip_code: '80203')
 
     within(first('.weather-card')) do

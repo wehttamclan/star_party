@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_29_033519) do
+ActiveRecord::Schema.define(version: 2018_10_29_230727) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 2018_10_29_033519) do
     t.integer "zip_code"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "host_id"
+    t.index ["host_id"], name: "index_parties_on_host_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,4 +39,5 @@ ActiveRecord::Schema.define(version: 2018_10_29_033519) do
     t.integer "role", default: 0
   end
 
+  add_foreign_key "parties", "users", column: "host_id"
 end

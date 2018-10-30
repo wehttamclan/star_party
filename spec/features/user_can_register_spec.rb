@@ -30,7 +30,7 @@ describe "As a visitor" do
 
       expect(current_path).to eq("/dashboard")
 
-      expect(page).to have_content("Welcome, #{user_info[:username]}")
+      expect(page).to have_content("Welcome, #{user_info[:name]}")
 
       expect(page).to have_link("My Account")
       expect(page).to_not have_link("Log In / Sign Up")
