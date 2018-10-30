@@ -26,6 +26,7 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: 'dashboard#show'
   get '/text', to: 'texts#new'
+  post '/text', to: 'texts#create'
 
   resources :users, only: [:new, :create]
 

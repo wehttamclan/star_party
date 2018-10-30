@@ -16,7 +16,7 @@ feature "As an authenticated user" do
       friend = "Bob"
 
       fill_in :friend_name, with: friend
-      fill_in :phone_number, with: "720-362-0696"
+      fill_in :phone_number, with: "+17203620696"
 
       click_on("Submit")
 
