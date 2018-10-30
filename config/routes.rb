@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      
+
       namespace :parties do
         get '/find_all', to: 'search#index' #by zip
       end
@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
     end
   end
-
-
 
   get '/forecast', to: 'forecast#index'
 
