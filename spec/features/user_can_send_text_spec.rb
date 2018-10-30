@@ -7,21 +7,29 @@ feature "As an authenticated user" do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       party = create(:party)
 
-      visit "/parties/#{party.id}"
-      click_on("Attend")
-      click_on("Text a friend")
+      VCR.use_cassette("party_show") do
+        visit "/parties/#{party.id}"
+        click_on("Attend")
+      end
 
-      expect(current_path).to eq('/text')
+      VCR.use_cassette("text") do
+        click_on("Text a friend")
 
-      friend = "Bob"
+        expect(current_path).to eq('/text')
 
-      fill_in :friend_name, with: friend
-      fill_in :phone_number, with: "+17203620696"
+        friend = "Bob"
 
-      click_on("Submit")
+        fill_in :friend_name, with: friend
+        fill_in :phone_number, with: "+17203620696"
+      end
 
-      expect(current_path).to eq('/dashboard')
-      expect(page).to have_content("Your text message to #{friend} was sent!")
+      VCR.use_cassette("dashboard") do
+        click_on("Submit")
+        friend = "Bob"
+
+        expect(current_path).to eq('/dashboard')
+        expect(page).to have_content("Your text message to #{friend} was sent!")
+      end
     end
   end
 end

@@ -20,7 +20,7 @@ class TextsController < ApplicationController
       Star Party and wants you to join! You can see more info at #{link}.")
 
 
-    flash[:alert] = "Your text message to #{params[:friend_name]} was sent!"
+    flash[:alert] = "Your text message to #{friend_name} was sent!"
     redirect_to '/dashboard'
   end
 end
