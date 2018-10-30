@@ -21,7 +21,7 @@ class Party < ApplicationRecord
     if rsvp == 'attend'
       self.users << user
     elsif rsvp == 'cancel'
-      user_party = UserParty.find(user_id: user, party_id: self)
+      user_party = UserParty.where(user_id: user, party_id: self)
       user_party.first.delete
     end
   end
