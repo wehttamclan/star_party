@@ -18,8 +18,9 @@
     <%= javascript_include_tag 'application.js' %>
   </head>
 
-
-  <body background="<%= apod.source %>">
+  <% cache("background-image")  do %>
+    <body background="<%= apod.source %>">
+  <% end  %>
     <nav class="navbar navbar-dark fixed-top">
       <a class="navbar-brand" href="/">
         <%= image_tag('sp_logo.png', alt: "SP Logo", class: 'img') %>

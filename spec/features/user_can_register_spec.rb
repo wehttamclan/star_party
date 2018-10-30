@@ -6,8 +6,7 @@ describe "As a visitor" do
       user_info = { name: "Bob Job",
                     email: "bob@bob.com",
                     phone_number: "123-456-7890",
-                    zip_code: 80202,
-                    username: "bobbo"
+                    zip_code: 80202
                   }
 
       visit "/"
