@@ -16,6 +16,7 @@ class PartiesController < ApplicationController
 
   def show
     @party = Party.find(params[:id])
+    @party.attendance(current_user, params[:attendance]) if params[:attendance]
   end
 
   private
