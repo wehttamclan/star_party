@@ -23,6 +23,8 @@ You can also clone down this repo and play with the code!
     - allows us to easily convert zip codes to latituges and longitudes 
   - `gem 'faraday'` https://github.com/lostisland/faraday
     - for making our API calls
+  - `gem 'geocoder'`
+    - allows us to search a 15 mile radius of given zip code to find nearby parties
   
   To user our app on your local, you will need two API Keys:
     - https://api.nasa.gov/index.html#apply-for-an-api-key (can be requested for free)
