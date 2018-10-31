@@ -18,7 +18,7 @@ feature "As an authenticated user" do
       expect(page).to have_css('.cloud-cover')
       expect(page).to have_css('.moon-phase')
       expect(page).to have_css('.rain-chance')
-      expect(page).to have_css('.rating')
+      expect(page).to have_css('.moon-name')
     end
     expect(page).to have_css('.select')
   end
