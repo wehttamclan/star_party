@@ -20,18 +20,18 @@ describe "As a guest user" do
     end
   end
   describe "When I log in with google" do
-    it "should take me to my dashboard" do
+    before(:each) do
       def stub_omniauth
         OmniAuth.config.test_mode = true
-        OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new({
+        OmniAuth.config.mock_auth[:default] = OmniAuth::AuthHash.new({
           info: { email: "hand@hand.com", name: "Ben"},
           :uid => "11"
         })
       end
-      
       stub_omniauth
-
-      VCR.use_cassette("visit login page") do
+    end
+    it "should take me to my dashboard" do
+      VCR.use_cassette("visit google login page") do
         visit("/login")
       end
 

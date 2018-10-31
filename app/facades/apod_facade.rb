@@ -8,14 +8,14 @@ class ApodFacade
     return_json[:title]
   end
 
-  def copyright
-    if return_json[:copyright]
-      return_json[:copyright]
-    else
-      "Public Domain"
-    end
-  end
-  
+  # def copyright
+  #   if return_json[:copyright]
+  #     return_json[:copyright]
+  #   else
+  #     "Public Domain"
+  #   end
+  # end
+
   private
   def return_json
     service.get_json
