@@ -16,5 +16,13 @@ describe TwilioFacade do
         expect(subject.number).to eq(expected)
       end
     end
+
+    context '#text_link' do
+      it 'should format a link for the given party' do
+        expected = "https://star-party.herokuapp.com/parties/5"
+
+        expect(subject.text_link).to eq(expected)
+      end
+    end
   end
 end
