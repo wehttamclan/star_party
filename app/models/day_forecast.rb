@@ -22,14 +22,37 @@ class DayForecast
   end
 
   def image_tag
-    moon = (@moon_phase * 10).round()
-    cloud = (@cloud_cover * 10).round()
+    moon = (moon_phase * 10).round()
+    cloud = (cloud_cover * 10).round()
     cloud = 9 if cloud == 10
+    moon = 0 if moon == 10
     moon = 0 if cloud == 9
     "#{cloud}#{moon}"
   end
 
+  def moon_name
+    moon_phase_namer.each do |range, name|
+      if range === moon_phase
+        return name
+      end
+    end
+  end
+
   private
+
+  def moon_phase_namer
+    {
+      0..0.2 => "new moon",
+      0.3..0.24 => "waxing crescent",
+      0.25 => "1st quarter moon",
+      0.26...0.49 => "waxing gibbous",
+      0.5 => "full moon",
+      0.51..0.74 => "waning gibbous",
+      0.75 => "last quarter moon",
+      0.76..0.97 => "waning crescent",
+      0.98..1 => "new moon"
+    }
+  end
 
   def moon_phase_converter
     {

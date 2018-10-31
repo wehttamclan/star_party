@@ -14,7 +14,9 @@ describe ForecastFacade do
   context 'instance methods' do
     context '#day_forecast_objects' do
       it 'returns dark sky json data' do
-        results = subject.day_forecast_objects
+        results = VCR.use_cassette("day_forecast_objects from facade2") do
+          subject.day_forecast_objects
+        end
 
         expect(results.length).to eq(8)
         expect(results.first).to be_a DayForecast
@@ -26,14 +28,6 @@ describe ForecastFacade do
         zip_code = subject.zip_code
 
         expect(zip_code).to eq('80203')
-      end
-    end
-
-    context '#week_summary' do
-      it 'returns the summary for the week' do
-        summary = subject.week_summary
-
-        expect(summary).to be_a String
       end
     end
 

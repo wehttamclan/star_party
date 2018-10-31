@@ -2,8 +2,12 @@ body {
    background-position: center;
    background-attachment: fixed;
    background-size: cover;
+   background-position: center;
 }
 
+.sub {
+  font-size: 18px;
+}
 
 .landing-body{
   position: relative;
@@ -37,6 +41,17 @@ body {
   font-size: 32px;
   background-color: #202030;
   color: #EAE0D5;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+}
+
+.login-button {
+  font-size: 32px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border: 0px;
   border-radius: 10px;
   opacity: 0.9;
   box-shadow: -1px 2px 8px #000000;
@@ -78,6 +93,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.login-form {
+  text-align: center;
+}
+
 .new-form .form-group {
   background-color: #EAE0D5;
 }
@@ -95,7 +114,21 @@ body {
   font-family: 'Athiti', sans-serif;
 }
 
+.google-log {
+  font-size: 20px;
+  background-color: white;
+  color: #202030;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: inset -1px 2px 8px #000000;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px 50px 10px 50px;
+  text-align: center;
+  z-index: 10;
+}
+
 .form-field {
+  text-align: center;
   font-size: 24px;
   background-color: #EAE0D5;
   caret-color: #202030;
@@ -116,7 +149,7 @@ body {
 }
 
 .title {
-  font-size: 32px;
+  font-size: 28px;
   background-color: #202030;
   color: #EAE0D5;
   border-radius: 10px;
@@ -127,6 +160,24 @@ body {
   width: auto;
   text-align: center;
   z-index: 10;
+}
+
+.title-like {
+  font-size: 28px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+  margin: 10px;
+  width: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.title p {
+  font-size: 19px;
 }
 
 .top-weather-card {
@@ -193,6 +244,21 @@ body {
   box-shadow: inset -1px 2px 4px #161621;
 }
 
+.index-card {
+  font-family: 'Athiti', sans-serif;
+  color: #EAE0D5;
+  background-color: #455777;
+  border-radius: 7px;
+  margin: 0px 10px 0px 10px;
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  box-shadow: inset -1px 2px 4px #161621;
+}
+
+.party {
+  margin: 0px 10px 0px 10px;
+}
+
 .column {
   float: left;
   width: 50%;
@@ -205,6 +271,21 @@ body {
 
 .create-button {
   margin-top: 30px;
+}
+
+.apod-info {
+ position: fixed;
+ bottom: 0;
+ margin-left: 50%;
+}
+
+.apod-wrapper {
+  margin: auto;
+}
+
+.pearl {
+  color: #EAE0D5;
+  text-align: right;
 }
 
 table {
@@ -229,3 +310,19 @@ tr {
 p {
   text-align: center;
 }
+
+.party-card {
+  font-family: 'Athiti', sans-serif;
+  font-size: 20px;
+  color: #EAE0D5;
+  background-color: #455777;
+  border-radius: 7px;
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  box-shadow: inset -1px 2px 4px #161621;
+  justify-content: space-between;
+  }
+
+  .party-card ul {
+    list-style-type: none;
+  }

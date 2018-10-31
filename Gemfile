@@ -39,6 +39,8 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'awesome_print'
 gem 'area'
 gem 'geocoder'
+gem 'omniauth-google-oauth2'
+gem 'twilio-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +56,8 @@ group :development, :test do
   gem 'mailcatcher'
   gem 'active-designer'
   gem 'simplecov'
+  gem 'vcr'
+  gem 'webmock'
 end
 
 group :development do

@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 describe DarkskyService do
+
   subject { DarkskyService.new("80203") }
   context '#dark_sky_data' do
     it 'returns dark sky json data' do
-      results = subject.dark_sky_data[:data]
+      results = VCR.use_cassette("pull dark sky data") do
+        subject.dark_sky_data[:data]
+      end
 
       expect(results.first).to have_key(:time)
       expect(results.first).to have_key(:moonPhase)

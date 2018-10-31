@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_10_29_033519) do
+=======
+ActiveRecord::Schema.define(version: 2018_10_30_000512) do
+>>>>>>> 6fc3a4d83b3bacacd5d15ebb8e85ced550d7612a
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +29,31 @@ ActiveRecord::Schema.define(version: 2018_10_29_033519) do
     t.integer "zip_code"
     t.float "latitude"
     t.float "longitude"
+<<<<<<< HEAD
+=======
+    t.bigint "host_id"
+    t.index ["host_id"], name: "index_parties_on_host_id"
+>>>>>>> 6fc3a4d83b3bacacd5d15ebb8e85ced550d7612a
   end
 
+  create_table "user_parties", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "party_id"
+    t.index ["party_id"], name: "index_user_parties_on_party_id"
+    t.index ["user_id"], name: "index_user_parties_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "username"
+    t.string "email"
+    t.string "phone_number"
+    t.integer "zip_code"
+    t.string "password_digest"
+    t.integer "role", default: 0
+  end
+
+  add_foreign_key "parties", "users", column: "host_id"
+  add_foreign_key "user_parties", "parties"
+  add_foreign_key "user_parties", "users"
 end

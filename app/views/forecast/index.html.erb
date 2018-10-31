@@ -1,5 +1,8 @@
-
-  <h1 class="title">Forecast Results for <%= @forecast_results.zip_code %></h1>
+<% cache"#{@forecast_results.zip_code}" do %>
+<div class='title'>
+  <h1>Forecast Results for <%= @forecast_results.zip_code %></h1>
+  <p>Powered by <a href='https://darksky.net/poweredby/'>Dark Sky</a></p>
+</div>
   <% @forecast_results.day_forecast_objects.each do |day_forecast| %>
     <div class='weather-card'>
       <section class='top-weather-card'>
@@ -10,36 +13,36 @@
           <div class="score-select">
             <div class="score-wrap">
               <h2>Star Score </h2>
-              <h2><%= day_forecast.star_party_rating %></h2>
+              <h2><%= day_forecast.star_party_rating %><span class="sub"> / 10</span></h2>
             </div>
             <%= link_to "Select this Day", new_party_path(date: day_forecast.time.strftime("%A, %b %d"), zip_code: @forecast_results.zip_code), method: :get,class: 'top-btn select' %>
           </div>
       </section>
 
-      <% cache("#{@forecast_results.zip_code}") do %>
       <section class='bottom-weather-card'>
         <div class="day weather-card-body">
           <table>
             <p class="summary weather-card-body"><%= day_forecast.summary %></p>
             <tr>
-              <th>Star Party Rating</th>
               <th>Cloud Coverage</th>
-            </tr>
-            <tr>
-              <td class="rating"><%= day_forecast.star_party_rating %></td>
-              <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
-            </tr>
-            <tr>
-              <th>Chance of Rain</th>
               <th>Moon Phase</th>
             </tr>
             <tr>
+              <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
+              <td class="moon-name"><%= day_forecast.moon_name %></td>
+            </tr>
+            <tr>
+              <th>Chance of Rain</th>
+              <th>Moon Phase Metric</th>
+            </tr>
+            <tr>
               <td class="rain-chance"><%= (day_forecast.rain_chance * 100).to_i %>%</td>
-              <td class="moon-phase"><%= day_forecast.moon_phase %></td>
+              <td class="moon-phase"><%=day_forecast.moon_phase%></td>
             </tr>
           </table>
         </div>
       </section>
-      <% end %>
+
     </div>
-<% end %>
+  <% end %>
+<% end  %>

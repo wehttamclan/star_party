@@ -1,0 +1,15 @@
+<p>Enter in your friend's name and phone number (including area code) and we'll send them
+  a text letting them know you're attending the party and you want
+  them to join you! We will include a link to the party as well!</p>
+
+<%= form_tag :text, method: :post %>
+
+<%= label_tag :friend_name, "Friend's Name" %>
+<%= text_field_tag :friend_name %>
+
+<%= label_tag :phone_number, "Friend's Phone Number" %>
+<%= number_field_tag :phone_number %>
+
+<%= hidden_field_tag 'party_id', @party_id %>
+
+<%= submit_tag "Submit" %>

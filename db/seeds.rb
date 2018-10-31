@@ -7,6 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Party.destroy_all
+User.destroy_all
+
+host = User.create(name: "Test Host", email: "host@test.com", password: 'test')
+user_1 = User.create(name: "Test User", email: "test@test.com", password: 'test')
+user_2 = User.create(name: "Test User2", email: "testuser@test.com", password: 'test')
+
 Party.create(title: "Comet Party",
           date: "01-01-2019",
           description: "View Halley's Comet",
@@ -15,7 +21,8 @@ Party.create(title: "Comet Party",
           state: "CO",
           zip_code: 80033,
           latitude: 39.754721,
-          longitude: -105.1089577)
+          longitude: -105.1089577,
+          host_id: host.id)
 
 Party.create(title: "Nebula Party",
           date: "11-11-2018",
@@ -25,8 +32,8 @@ Party.create(title: "Nebula Party",
           state: "CO",
           zip_code: 80212,
           latitude: 39.744609,
-          longitude: -105.0550696
-          )
+          longitude: -105.0550696,
+          host_id: host.id)
 
 Party.create(title: "Meteor Party",
           date: "07-07-2017",
@@ -36,4 +43,5 @@ Party.create(title: "Meteor Party",
           state: "CO",
           zip_code: 80228,
           latitude: 39.6497555,
-          longitude: -105.1629224)
+          longitude: -105.1629224,
+          host_id: host.id)
