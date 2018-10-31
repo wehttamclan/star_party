@@ -42,15 +42,15 @@ class DayForecast
 
   def moon_phase_namer
     {
-      0..0.4 => "new moon",
-      0.5..0.24 => "waxing crescent",
+      0..0.2 => "new moon",
+      0.3..0.24 => "waxing crescent",
       0.25 => "1st quarter moon",
       0.26...0.49 => "waxing gibbous",
       0.5 => "full moon",
       0.51..0.74 => "waning gibbous",
       0.75 => "last quarter moon",
-      0.76..0.95 => "waning crescent",
-      0.96..1 => "new moon"
+      0.76..0.97 => "waning crescent",
+      0.98..1 => "new moon"
     }
   end
 
