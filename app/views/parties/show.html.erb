@@ -25,4 +25,4 @@
   <% end %>
 </div>
 
-<%= link_to "<< All Parties", party_search_path(q_find: @party.zip_code), class: 'party btn' %>
+<%= link_to "Back to all Parties in #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'create-button btn' %>
