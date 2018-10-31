@@ -5,8 +5,8 @@ class TextsController < ApplicationController
 
   def create
     friend_name = params[:friend_name]
-    party = Party.find(params[:party_id])
-    twilio = TwilioFacade.new(friend_name, current_user.name, params[:phone_number], party)
+    party_id = Party.find(params[:party_id]).id
+    twilio = TwilioFacade.new(friend_name, current_user.name, params[:phone_number], party_id)
     twilio.text
 
     # client = Twilio::REST::Client.new(ENV["twilio_account_sid"], ENV["twilio_auth_token"])

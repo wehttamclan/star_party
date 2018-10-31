@@ -1,10 +1,10 @@
 class TwilioFacade
-  def initialize(friend_name, user_name, number, party)
+  def initialize(friend_name, user_name, number, party_id)
     @client = Twilio::REST::Client.new(ENV["twilio_account_sid"], ENV["twilio_auth_token"])
     @friend_name = friend_name
     @user_name = user_name
     @number = number
-    @party_id = party
+    @party_id = party_id
   end
 
   def text
