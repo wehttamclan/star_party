@@ -11,8 +11,11 @@ class TwilioFacade
     @client.messages.create(
       from: ENV["twilio_phone_number"],
       to: number,
-      body: "Hi #{@friend_name}! #{@user_name} is attending a
-      Star Party and wants you to join! You can see more info at #{text_link}.")
+      body: text_body)
+  end
+
+  def friend_name
+    @friend_name.capitalize
   end
 
   def number
@@ -21,5 +24,9 @@ class TwilioFacade
 
   def text_link
     link = "https://star-party.herokuapp.com/parties/#{@party_id}"
+  end
+
+  def text_body
+    "Hi #{friend_name}! #{@user_name} is attending a Star Party and wants you to join! You can see more info at #{text_link}."
   end
 end

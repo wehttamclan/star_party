@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe TwilioFacade do
 
-  subject { TwilioFacade.new("Friend", "User", "720-730-7827", 5) }
+  subject { TwilioFacade.new("friend", "User", "720-730-7827", 5) }
 
   it 'exists' do
     expect(subject).to be_a(TwilioFacade)
@@ -22,6 +22,14 @@ describe TwilioFacade do
         expected = "https://star-party.herokuapp.com/parties/5"
 
         expect(subject.text_link).to eq(expected)
+      end
+    end
+
+    context '#text_body' do
+      it 'should format a set body for text' do
+        expected = "Hi Friend! User is attending a Star Party and wants you to join! You can see more info at https://star-party.herokuapp.com/parties/5."
+
+        expect(subject.text_body).to eq(expected)
       end
     end
   end
