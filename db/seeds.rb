@@ -13,7 +13,9 @@ Party.create(title: "Comet Party",
           street_address: "9357 W 26th Ave",
           city: "Wheat Ridge",
           state: "CO",
-          zip_code: 80033)
+          zip_code: 80033,
+          latitude: 39.754721,
+          longitude: -105.1089577)
 
 Party.create(title: "Nebula Party",
           date: "11-11-2018",
@@ -21,7 +23,10 @@ Party.create(title: "Nebula Party",
           street_address: "1700 N Sheridan Blvd",
           city: "Denver",
           state: "CO",
-          zip_code: 80212)
+          zip_code: 80212,
+          latitude: 39.744609,
+          longitude: -105.0550696
+          )
 
 Party.create(title: "Meteor Party",
           date: "07-07-2017",
@@ -29,4 +34,6 @@ Party.create(title: "Meteor Party",
           street_address: "15600 W Morrison Rd",
           city: "Lakewood",
           state: "CO",
-          zip_code: 80228)
+          zip_code: 80228,
+          latitude: 39.6497555,
+          longitude: -105.1629224)
