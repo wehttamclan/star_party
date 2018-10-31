@@ -5,12 +5,11 @@ class TextsController < ApplicationController
 
   def create
     friend_name = params[:friend_name]
-    TwilioFacade.new.text
-    # client = Twilio::REST::Client.new(ENV["twilio_account_sid"], ENV["twilio_auth_token"])
-    friend_phone = params[:phone_number]
     party = Party.find(params[:party_id])
-    link = "https://star-party.herokuapp.com/parties/#{party.id}"
+    twilio = TwilioFacade.new(friend_name, current_user.name, params[:phone_number], party)
+    twilio.text
 
+    # client = Twilio::REST::Client.new(ENV["twilio_account_sid"], ENV["twilio_auth_token"])
     # client.messages.create(
     #   from: ENV["twilio_phone_number"],
     #   to: friend_phone,
