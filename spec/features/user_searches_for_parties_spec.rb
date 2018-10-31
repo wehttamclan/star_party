@@ -51,6 +51,33 @@ describe 'visitor searches for parties' do
       expect(page).to have_content(@future_party.title)
       expect(page).to_not have_content(@past_party.title)
     end
+
+    it 'does not return parties outside 15mi radius' do
+      host = create(:user)
+
+      VCR.use_cassette("create near and far parties") do
+        @near_party = create(:party, title: "Near Party")
+        @far_party = create(:party,
+                          title: "Far Party",
+                          zip_code: 14624,
+                          latitude: 43.161030,
+                          longitude: -77.610924)
+      end
+
+      VCR.use_cassette("visit root") do
+        visit '/'
+      end
+
+      fill_in :q_find, with: 80203
+      VCR.use_cassette("find to not show far parties") do
+        find(".find", visible: false).click
+      end
+
+      expect(page).to have_css(".party-card", count: 1)
+
+      expect(page).to have_content(@near_party.title)
+      expect(page).to_not have_content(@far_party.title)
+    end
   end
 
   context 'with zip code corresponding to zero parties' do
