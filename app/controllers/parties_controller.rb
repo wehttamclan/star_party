@@ -6,11 +6,16 @@ class PartiesController < ApplicationController
   def create
     party = Party.new(party_params.merge(new_party_params))
     party.host_id = current_user.id
-    coordinates = Geocoder.coordinates(party.address)
-    party.latitude = coordinates[0]
-    party.longitude = coordinates[1]
-    if party.save
-      redirect_to party_path(party)
+    if Geocoder.coordinates(party.address)
+      coordinates = Geocoder.coordinates(party.address)
+      party.latitude = coordinates[0]
+      party.longitude = coordinates[1]
+      if party.save
+        redirect_to party_path(party)
+      else
+        flash[:notice] = 'Something went wrong.'
+        redirect_to new_party_path(party_params)
+      end
     else
       flash[:notice] = 'Something went wrong.'
       redirect_to new_party_path(party_params)
