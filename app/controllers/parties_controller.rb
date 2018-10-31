@@ -21,10 +21,10 @@ class PartiesController < ApplicationController
 
   private
   def party_params
-    params.require(:party).permit(:title, :description, :date, :street_address, :city, :zip_code)
+    params.require(:party).permit(:title, :description, :date, :street_address, :city, :zip_code, :state)
   end
 
   def new_party_params
-    params.permit(:zip_code, :date, :state)
+    params.permit(:zip_code, :date)
   end
 end

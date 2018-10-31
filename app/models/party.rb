@@ -13,6 +13,10 @@ class Party < ApplicationRecord
     self.date.strftime('%b. %-d, %Y')
   end
 
+  def view_time
+    self.date.strftime('%I:%M %p')
+  end
+
   def location
     "#{self.street_address}, #{self.city}, #{self.state} #{self.zip_code}"
   end

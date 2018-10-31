@@ -9,7 +9,9 @@
   </div>
 
   <div class="field">
-    <%= f.text_area :description, placeholder: 'Description', class: "col-sm-2 form-field" %>
+  <div class="col-sm-2 form-field">
+    <%= time_select :party, 'date', prompt: {hour: 'Hour', minute: 'Minute'} %>
+  </div>
   </div>
 
   <div class="field">
@@ -23,8 +25,13 @@
   <div class="field">
     <%= f.text_field :zip_code, placeholder: "#{@party.zip_code}", readonly: true, class: "col-sm-2 zip-code"%>
   </div>
+
   <div class="field">
-    <%= select_tag :state, options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2 form-field" %>
+    <%= select_tag 'party[state]', options_for_select(us_states), prompt: 'Select a State', class: "col-sm-2 form-field" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :description, placeholder: 'Description', class: "col-sm-2 form-field" %>
   </div>
 
   <%= f.hidden_field :date, value: @party.date %>
