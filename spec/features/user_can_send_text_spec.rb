@@ -5,10 +5,12 @@ feature "As an authenticated user" do
     it 'can send a text to a friend to invite them' do
       user = create(:user)
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      party = create(:party)
+      VCR.use_cassette("create standard party") do
+        @party = create(:party)
+      end
 
       VCR.use_cassette("party_show") do
-        visit "/parties/#{party.id}"
+        visit "/parties/#{@party.id}"
         click_on("Attend")
       end
 

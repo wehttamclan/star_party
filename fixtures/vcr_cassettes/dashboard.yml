@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.twilio.com/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages.json
+    body:
+      encoding: UTF-8
+      string: Body=Hi+Bob%21+Wendell+Borton+is+attending+a%0A++++++Star+Party+and+wants+you+to+join%21+You+can+see+more+info+at+https%3A%2F%2Fstar-party.herokuapp.com%2Fparties%2F1.&From=%2B17207307828&To=%2B17203620696
+    headers:
+      User-Agent:
+      - twilio-ruby/5.15.1 (ruby/x86_64-darwin17 2.4.2-p198)
+      Accept-Charset:
+      - utf-8
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept:
+      - application/json
+      Authorization:
+      - Basic QUNmOGFkMzkyZmY1NTI2NGNlNmNjNjY1MjM5ZDgwNTNhZjoyNGJkMzAzNzlhNDkyMGE4MTQwZGMxZTMwZjFiODY0Nw==
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 201
+      message: CREATED
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Content-Type, If-Match, If-Modified-Since, If-None-Match,
+        If-Unmodified-Since
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - ETag
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 31 Oct 2018 18:26:51 GMT
+      Strict-Transport-Security:
+      - max-age=15768000
+      Twilio-Concurrent-Requests:
+      - '1'
+      Twilio-Request-Duration:
+      - '0.108'
+      Twilio-Request-Id:
+      - RQd2f10245137a4602b97f0ae0eb2390a5
+      X-Powered-By:
+      - AT-5000
+      X-Shenanigans:
+      - none
+      Content-Length:
+      - '949'
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"sid": "SM97b5e87a48b44816b7cf2c67288d3126", "date_created": "Wed,
+        31 Oct 2018 18:26:51 +0000", "date_updated": "Wed, 31 Oct 2018 18:26:51 +0000",
+        "date_sent": null, "account_sid": "ACf8ad392ff55264ce6cc665239d8053af", "to":
+        "+17203620696", "from": "+17207307828", "messaging_service_sid": null, "body":
+        "Sent from your Twilio trial account - Hi Bob! Wendell Borton is attending
+        a\n      Star Party and wants you to join! You can see more info at https://star-party.herokuapp.com/parties/1.",
+        "status": "queued", "num_segments": "2", "num_media": "0", "direction": "outbound-api",
+        "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code":
+        null, "error_message": null, "uri": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SM97b5e87a48b44816b7cf2c67288d3126.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SM97b5e87a48b44816b7cf2c67288d3126/Media.json"}}'
+    http_version: 
+  recorded_at: Wed, 31 Oct 2018 18:26:51 GMT
+- request:
+    method: get
+    uri: https://api.nasa.gov/planetary/apod?api_key=JMa0lzpaWyNFgzBdVWMqr0SkMjY1bsLIqzzGAeBl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.3
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 31 Oct 2018 18:26:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      X-Ratelimit-Limit:
+      - '1000'
+      X-Ratelimit-Remaining:
+      - '982'
+      Via:
+      - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
+      Age:
+      - '2'
+      X-Cache:
+      - MISS
+      Access-Control-Allow-Origin:
+      - "*"
+      Strict-Transport-Security:
+      - max-age=31536000; preload
+    body:
+      encoding: ASCII-8BIT
+      string: '{"copyright":"Martin Pugh","date":"2018-10-31","explanation":"Better
+        known as Hind''s Crimson Star, R Leporis is a rare star in planet Earth''s
+        night sky. It''s also a shocking shade of red. The star''s discoverer, 19th
+        century English astronomer John Russell Hind, reported that it appeared in
+        a telescope \"... like a drop of blood on a black field.\" Located 1,360 light-years
+        away in the constellation Lepus the star is a Mira-type variable, changing
+        its brightness over a period of about 14 months. R Leporis is now recognized
+        as a carbon star, a very cool and highly evolved red giant with an extreme
+        abundance of carbon. Extra carbon in carbon stars is created by helium fusion
+        near the dying stellar core and dredged up into the stars'' outer layers.
+        The dredge-up results in an overabundance of simple carbon molecules, like
+        CO, CH, CN, and C2. While it''s true that cool stars radiate most of their
+        energy in red and infrared light, the carbon molecules strongly absorb what
+        little blue light is left and give carbon stars an exceptionally deep red
+        color.  R Leporis is losing its carbon-rich atmosphere into the surrounding
+        interstellar material through a strong stellar wind though, and could be near
+        the transition to a planetary nebula. Oh, and Happy Halloween from the folks
+        at APOD.","hdurl":"https://apod.nasa.gov/apod/image/1811/RLeporisMP.jpg","media_type":"image","service_version":"v1","title":"R
+        Leporis: A Vampire''s Star","url":"https://apod.nasa.gov/apod/image/1811/RLeporisMP1024.jpg"}
+
+'
+    http_version: 
+  recorded_at: Wed, 31 Oct 2018 18:26:53 GMT
+recorded_with: VCR 4.0.0
