@@ -7,5 +7,7 @@ FactoryBot.define do
     city { "Starville" }
     state { "CO"}
     zip_code { 80203 }
+    latitude { 39.742043 }
+    longitude { -104.991531 }
   end
 end
