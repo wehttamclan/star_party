@@ -1,7 +1,6 @@
 version: 2
 jobs:
-  build:
-    ...
+  build: docker
   deploy:
     docker:
       - image: buildpack-deps:trusty
