@@ -20,7 +20,7 @@ describe DayForecast do
   context 'instance methods' do
     context '#star_party_rating' do
       it 'uses attributes to calculate a star_party_rating' do
-        expect(subject.star_party_rating).to eq(1.6)
+        expect(subject.star_party_rating).to eq(4.1)
       end
     end
   end
