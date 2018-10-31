@@ -2,7 +2,8 @@
 
 <div class='party-card'>
   <ul>
-    <li class='date'>Date: <%= @party.date.strftime('%A, %b %d') %></li>
+    <li class='date'>Date: <%= @party.view_date %></li>
+    <li class='date'>Time: <%= @party.view_time %></li>
     <li class='description'><%= @party.description %></li>
     <% if current_user %>
       <li class='address'>Address: <%= @party.street_address %>, <%= @party.city %></li>
