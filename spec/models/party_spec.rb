@@ -15,26 +15,30 @@ describe Party, type: :model do
 
   describe 'instance methods' do
     it '#location' do
-      p = create(:party)
+      VCR.use_cassette("create standard party") do
+        @p = create(:party)
+      end
 
-      expect(p.location).to eq(
-        "#{p.street_address}, #{p.city}, #{p.state} #{p.zip_code}")
+      expect(@p.location).to eq(
+        "#{@p.street_address}, #{@p.city}, #{@p.state} #{@p.zip_code}")
     end
 
     context '#attendance' do
       it 'should set or delete user relationship to party' do
-        party = create(:party)
+        VCR.use_cassette("create standard party") do
+          @party = create(:party)
+        end
         user = create(:user)
 
-        expect(party.users.first).to be(nil)
+        expect(@party.users.first).to be(nil)
 
-        party.attendance(user, "attend")
+        @party.attendance(user, "attend")
 
-        expect(party.users.first).to eq(user)
+        expect(@party.users.first).to eq(user)
 
-        party.attendance(user, "cancel")
+        @party.attendance(user, "cancel")
 
-        expect(party.users.first).to be(nil)
+        expect(@party.users.first).to be(nil)
       end
     end
   end

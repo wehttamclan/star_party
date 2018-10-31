@@ -4,6 +4,6 @@ class PartySearchResult
   end
 
   def parties
-    @parties ||= Party.where('zip_code = ? AND date >= ?', @zip_code, Date.today)
+    @parties ||= Party.where('date >= ?', Date.today).near(@zip_code, 15)
   end
 end

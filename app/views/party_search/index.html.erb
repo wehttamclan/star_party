@@ -1,4 +1,4 @@
-<h3>Star Parties in zip code <%= @party_search_result.parties.first[:zip_code] %></h3>
+<h3>Star Parties within 15 miles of <%= @party_search_result.parties.first[:zip_code] %></h3>
 
 <% @party_search_result.parties.each do |party| %>
   <div class="party-card">
@@ -9,6 +9,7 @@
       <div class="date party"><strong>Time: <%= party.view_time %></div>
 
       <div class="description party"><strong>Where: </strong><%= party.location %></div>
+      <div><%= link_to "View Party Details", party_path(party), class: 'create-button' %></div>
     </div>
   </div>
 <% end %>

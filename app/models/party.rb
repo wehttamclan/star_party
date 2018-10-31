@@ -8,6 +8,18 @@ class Party < ApplicationRecord
   has_many :user_parties, dependent: :destroy
   has_many :users, through: :user_parties, dependent: :destroy
 
+  geocoded_by :address
+  after_validation :geocode
+
+  attr_reader :address
+
+  def address
+    [street_address, city, zip_code, state].compact.join(", ")
+  end
+
+  def address_changed
+    street_address_changed? || city_changed? || zip_code_changed? || state_changed?
+  end
 
   def view_date
     self.date.strftime('%b. %-d, %Y')

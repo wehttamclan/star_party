@@ -25,3 +25,5 @@
     <p>Please log in to view party details and to rsvp.</p>
   <% end %>
 </div>
+
+<%= link_to "Back to all Parties in #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'create-button btn' %>
