@@ -7,4 +7,14 @@ describe TwilioFacade do
   it 'exists' do
     expect(subject).to be_a(TwilioFacade)
   end
+
+  context 'instance methods' do
+    context '#number' do
+      it 'should format phone number for Twilio' do
+        expected = '+17207307827'
+
+        expect(subject.number).to eq(expected)
+      end
+    end
+  end
 end
