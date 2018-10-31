@@ -29,15 +29,15 @@
             </tr>
             <tr>
               <td class="cloud-cover"><%= (day_forecast.cloud_cover * 100).to_i %>%</td>
-              <td class="moon-phase"><%= day_forecast.moon_phase %></td>
+              <td class="moon-phase"><%= day_forecast.moon_name %></td>
             </tr>
             <tr>
               <th>Chance of Rain</th>
-              <th>(moon info TOP)</th>
+              <th>(Full Moon = 0)</th>
             </tr>
             <tr>
               <td class="rain-chance"><%= (day_forecast.rain_chance * 100).to_i %>%</td>
-              <td class="moon-info">(moon info BOTTOM)</td>
+              <td class="moon-info">(New Moon = 1)</td>
             </tr>
           </table>
         </div>
