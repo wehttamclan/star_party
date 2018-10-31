@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 31 Oct 2018 17:25:31 GMT
+      - Wed, 31 Oct 2018 18:26:55 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,11 +33,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '979'
+      - '980'
       Via:
       - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       Age:
-      - '0'
+      - '1'
       X-Cache:
       - MISS
       Access-Control-Allow-Origin:
@@ -68,5 +68,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 31 Oct 2018 17:25:31 GMT
+  recorded_at: Wed, 31 Oct 2018 18:26:55 GMT
 recorded_with: VCR 4.0.0

@@ -11,6 +11,8 @@ class Party < ApplicationRecord
   geocoded_by :address
   after_validation :geocode
 
+  attr_reader :address
+
   def address
     [street_address, city, zip_code, state].compact.join(", ")
   end
