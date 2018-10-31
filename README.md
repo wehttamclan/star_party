@@ -1,4 +1,5 @@
 # README
+[![Maintainability](https://api.codeclimate.com/v1/badges/981b45677d5bb8f9cb65/maintainability)](https://codeclimate.com/github/BeccaHyland/star_party/maintainability)
 
 This project was developed out of a need and desire to create more interest and community around the astronomy community. One of the most exciting events in astronomy is the Star Party. Typically, this is when people gather, and with the help of an expert and a telescope, they learn and admire the sights in the night sky. Sounds exciting, but the problem is finding these parties! Sometimes you can find a stray post on meetup or a local astronomical society website, but you have to spend too much time searching just to find an event near you.  Enter the StarParty app, where anyone can create a Star Party or search for a Star Party all from one easy to use app! 
 
@@ -26,11 +27,13 @@ You can also clone down this repo and play with the code!
   - `gem 'geocoder'`
     - allows us to search a 15 mile radius of given zip code to find nearby parties
   
-  To user our app on your local, you will need two API Keys:
+  To user our app on your local, you will need these API Keys:
     - https://api.nasa.gov/index.html#apply-for-an-api-key (can be requested for free)
       - NASA API used to pull the background image, the NASA Astronomy Picture of the Day.
     - https://darksky.net/dev/docs (can be resquested for free)
       - Dark Sky API used for all weather and moon related information.
+    - https://www.twilio.com/docs/sms/quickstart/ruby
+      - Twilio used for sending text messages.
   
 
 * Configuration
