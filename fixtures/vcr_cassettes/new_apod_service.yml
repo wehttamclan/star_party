@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 30 Oct 2018 21:31:33 GMT
+      - Wed, 31 Oct 2018 17:09:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -33,11 +33,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '904'
+      - '974'
       Via:
       - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       Age:
-      - '0'
+      - '1'
       X-Cache:
       - MISS
       Access-Control-Allow-Origin:
@@ -46,24 +46,27 @@ http_interactions:
       - max-age=31536000; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"copyright":"Yin Hao","date":"2018-10-30","explanation":"Meteors have
-        been shooting out from the constellation of Orion.  This was expected, as
-        October is the time of year for the Orionids Meteor Shower.  Pictured here,
-        over two dozen meteors were caught in successively added exposures last October
-        over Wulan Hada volcano in Inner Mongolia, China. The featured image shows
-        multiple meteor streaks that can all be connected to a single small region
-        on the sky called the radiant, here visible just above and to the left of
-        the belt of Orion,  The Orionids meteors started as sand sized bits expelled
-        from Comet Halley during one of its trips to the inner Solar System.  Comet
-        Halley is actually responsible for two known meteor showers, the other known
-        as the Eta Aquarids and visible every May.  An Orionids image featured on
-        APOD one year ago today from the same location shows the same car.  Next month,
-        the Leonids Meteor Shower from Comet Tempel-Tuttle should also result in some
-        bright meteor streaks.   Follow APOD on: Facebook,  Instagram, Reddit, or
-        Twitter","hdurl":"https://apod.nasa.gov/apod/image/1810/Orionids_Hao_2324.jpg","media_type":"image","service_version":"v1","title":"Orionids
-        Meteors over Inner Mongolia","url":"https://apod.nasa.gov/apod/image/1810/Orionids_Hao_960.jpg"}
+      string: '{"copyright":"Martin Pugh","date":"2018-10-31","explanation":"Better
+        known as Hind''s Crimson Star, R Leporis is a rare star in planet Earth''s
+        night sky. It''s also a shocking shade of red. The star''s discoverer, 19th
+        century English astronomer John Russell Hind, reported that it appeared in
+        a telescope \"... like a drop of blood on a black field.\" Located 1,360 light-years
+        away in the constellation Lepus the star is a Mira-type variable, changing
+        its brightness over a period of about 14 months. R Leporis is now recognized
+        as a carbon star, a very cool and highly evolved red giant with an extreme
+        abundance of carbon. Extra carbon in carbon stars is created by helium fusion
+        near the dying stellar core and dredged up into the stars'' outer layers.
+        The dredge-up results in an overabundance of simple carbon molecules, like
+        CO, CH, CN, and C2. While it''s true that cool stars radiate most of their
+        energy in red and infrared light, the carbon molecules strongly absorb what
+        little blue light is left and give carbon stars an exceptionally deep red
+        color.  R Leporis is losing its carbon-rich atmosphere into the surrounding
+        interstellar material through a strong stellar wind though, and could be near
+        the transition to a planetary nebula. Oh, and Happy Halloween from the folks
+        at APOD.","hdurl":"https://apod.nasa.gov/apod/image/1811/RLeporisMP.jpg","media_type":"image","service_version":"v1","title":"R
+        Leporis: A Vampire''s Star","url":"https://apod.nasa.gov/apod/image/1811/RLeporisMP1024.jpg"}
 
 '
     http_version: 
-  recorded_at: Tue, 30 Oct 2018 21:31:33 GMT
+  recorded_at: Wed, 31 Oct 2018 17:09:36 GMT
 recorded_with: VCR 4.0.0
