@@ -3,7 +3,9 @@ require 'rails_helper'
 describe 'visitor searches for parties' do
   context 'with a valid zip code' do
     it 'returns all parties' do
-      create_list(:party, 5)
+      VCR.use_cassette("create 5 parties") do
+        create_list(:party, 5)
+      end
 
       VCR.use_cassette("visit root") do
         visit '/'
@@ -28,32 +30,11 @@ describe 'visitor searches for parties' do
     it 'does not return past parties' do
       host = create(:user)
 
-      today_party = create(:party, title: "Comet Party",
-                date: Date.today,
-                description: "View Halley's Comet",
-                street_address: "100 Host Place",
-                city: "Starville",
-                state: "CO",
-                zip_code: 80203,
-                host_id: host.id)
-
-      future_party = create(:party, title: "Nebula Party",
-                date: "11-11-2018",
-                description: "View Turing Nebula",
-                street_address: "888 Galaxy Road",
-                city: "Starville",
-                state: "CO",
-                zip_code: 80203,
-                host_id: host.id)
-
-      past_party = create(:party, title: "Meteor Party",
-                date: "07-07-2017",
-                description: "View Lovelace Meteor Shower",
-                street_address: "42 Universe Way",
-                city: "Douglastown",
-                state: "CO",
-                zip_code: 80203,
-                host_id: host.id)
+      VCR.use_cassette("create past, present, future party") do
+        @today_party = create(:party, title: "Today Party", date: Date.today)
+        @future_party = create(:party, title: "Future Party", date: "11-11-2018")
+        @past_party = create(:party, title: "Past Party", date: "07-07-2017")
+      end
 
       VCR.use_cassette("visit root") do
         visit '/'
@@ -66,33 +47,58 @@ describe 'visitor searches for parties' do
 
       expect(page).to have_css(".party-card", count: 2)
 
-      expect(page).to have_content(today_party.title)
-      expect(page).to have_content(today_party.description)
-
-      expect(page).to have_content(future_party.title)
-      expect(page).to have_content(future_party.description)
-
-      expect(page).to_not have_content(past_party.title)
-      expect(page).to_not have_content(past_party.description)
+      expect(page).to have_content(@today_party.title)
+      expect(page).to have_content(@future_party.title)
+      expect(page).to_not have_content(@past_party.title)
     end
-  end
 
-  context 'with zip code corresponding to zero parties' do
-    it 'returns a message on index page' do
-      create(:party, zip_code: 80000)
+    it 'does not return parties outside 15mi radius' do
+      host = create(:user)
+
+      VCR.use_cassette("create near and far parties") do
+        @near_party = create(:party, title: "Near Party")
+        @far_party = create(:party,
+                          title: "Far Party",
+                          zip_code: 14624,
+                          latitude: 43.161030,
+                          longitude: -77.610924)
+      end
 
       VCR.use_cassette("visit root") do
         visit '/'
       end
 
-      fill_in :q_find, with: 81111
+      fill_in :q_find, with: 80203
+      VCR.use_cassette("find to not show far parties") do
+        find(".find", visible: false).click
+      end
+
+      expect(page).to have_css(".party-card", count: 1)
+
+      expect(page).to have_content(@near_party.title)
+      expect(page).to_not have_content(@far_party.title)
+    end
+  end
+
+  context 'with zip code corresponding to zero parties' do
+    it 'returns a message on index page' do
+      VCR.use_cassette("create standard party") do
+        create(:party)
+      end
+
+      VCR.use_cassette("visit root") do
+        visit '/'
+      end
+
+      fill_in :q_find, with: 14624
+
       VCR.use_cassette("click another other find") do
         find(".find", visible: false).click
       end
 
       expect(current_path).to eq("/")
       expect(page).to_not have_css(".party")
-      expect(page).to have_content("No parties found in 81111. Try another search!")
+      expect(page).to have_content("No parties found near 14624. Try another search!")
     end
   end
 end
