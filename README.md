@@ -26,11 +26,13 @@ You can also clone down this repo and play with the code!
   - `gem 'geocoder'`
     - allows us to search a 15 mile radius of given zip code to find nearby parties
   
-  To user our app on your local, you will need two API Keys:
+  To user our app on your local, you will need these API Keys:
     - https://api.nasa.gov/index.html#apply-for-an-api-key (can be requested for free)
       - NASA API used to pull the background image, the NASA Astronomy Picture of the Day.
     - https://darksky.net/dev/docs (can be resquested for free)
       - Dark Sky API used for all weather and moon related information.
+    - https://www.twilio.com/docs/sms/quickstart/ruby
+      - Twilio used for sending text messages.
   
 
 * Configuration
