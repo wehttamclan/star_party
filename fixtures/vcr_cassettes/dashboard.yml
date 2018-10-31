@@ -5,7 +5,7 @@ http_interactions:
     uri: https://api.twilio.com/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages.json
     body:
       encoding: UTF-8
-      string: Body=Hi+Bob%21+Wendell+Borton+is+attending+a%0A++++++Star+Party+and+wants+you+to+join%21+You+can+see+more+info+at+https%3A%2F%2Fstar-party.herokuapp.com%2Fparties%2F1.&From=%2B17207307828&To=%2B17203620696
+      string: Body=Hi+Bob%21+Sherri+is+attending+a+Star+Party+and+wants+you+to+join%21+You+can+see+more+info+at+https%3A%2F%2Fstar-party.herokuapp.com%2Fparties%2F1.&From=%2B17207307828&To=%2B117203620696
     headers:
       User-Agent:
       - twilio-ruby/5.15.1 (ruby/x86_64-darwin17 2.4.2-p198)
@@ -38,40 +38,40 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Wed, 31 Oct 2018 18:26:51 GMT
+      - Wed, 31 Oct 2018 20:33:22 GMT
       Strict-Transport-Security:
       - max-age=15768000
       Twilio-Concurrent-Requests:
       - '1'
       Twilio-Request-Duration:
-      - '0.108'
+      - '0.076'
       Twilio-Request-Id:
-      - RQd2f10245137a4602b97f0ae0eb2390a5
+      - RQ0e2083e0d5db46df95c3004af314755a
       X-Powered-By:
       - AT-5000
       X-Shenanigans:
       - none
       Content-Length:
-      - '949'
+      - '934'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"sid": "SM97b5e87a48b44816b7cf2c67288d3126", "date_created": "Wed,
-        31 Oct 2018 18:26:51 +0000", "date_updated": "Wed, 31 Oct 2018 18:26:51 +0000",
+      string: '{"sid": "SMa201ea8a12af4fe8847a3bdac61b5712", "date_created": "Wed,
+        31 Oct 2018 20:33:22 +0000", "date_updated": "Wed, 31 Oct 2018 20:33:22 +0000",
         "date_sent": null, "account_sid": "ACf8ad392ff55264ce6cc665239d8053af", "to":
         "+17203620696", "from": "+17207307828", "messaging_service_sid": null, "body":
-        "Sent from your Twilio trial account - Hi Bob! Wendell Borton is attending
-        a\n      Star Party and wants you to join! You can see more info at https://star-party.herokuapp.com/parties/1.",
+        "Sent from your Twilio trial account - Hi Bob! Sherri is attending a Star
+        Party and wants you to join! You can see more info at https://star-party.herokuapp.com/parties/1.",
         "status": "queued", "num_segments": "2", "num_media": "0", "direction": "outbound-api",
         "api_version": "2010-04-01", "price": null, "price_unit": "USD", "error_code":
-        null, "error_message": null, "uri": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SM97b5e87a48b44816b7cf2c67288d3126.json",
-        "subresource_uris": {"media": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SM97b5e87a48b44816b7cf2c67288d3126/Media.json"}}'
+        null, "error_message": null, "uri": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SMa201ea8a12af4fe8847a3bdac61b5712.json",
+        "subresource_uris": {"media": "/2010-04-01/Accounts/ACf8ad392ff55264ce6cc665239d8053af/Messages/SMa201ea8a12af4fe8847a3bdac61b5712/Media.json"}}'
     http_version: 
-  recorded_at: Wed, 31 Oct 2018 18:26:51 GMT
+  recorded_at: Wed, 31 Oct 2018 20:33:22 GMT
 - request:
     method: get
-    uri: https://api.nasa.gov/planetary/apod?api_key=JMa0lzpaWyNFgzBdVWMqr0SkMjY1bsLIqzzGAeBl
+    uri: https://api.nasa.gov/planetary/apod?api_key=oZooGV3jttBqMMbqL2qGz5PZwWS0HProICaJmTGk
     body:
       encoding: US-ASCII
       string: ''
@@ -90,7 +90,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 31 Oct 2018 18:26:53 GMT
+      - Wed, 31 Oct 2018 20:33:22 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -102,11 +102,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '982'
+      - '987'
       Via:
       - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       Age:
-      - '2'
+      - '0'
       X-Cache:
       - MISS
       Access-Control-Allow-Origin:
@@ -137,5 +137,5 @@ http_interactions:
 
 '
     http_version: 
-  recorded_at: Wed, 31 Oct 2018 18:26:53 GMT
+  recorded_at: Wed, 31 Oct 2018 20:33:22 GMT
 recorded_with: VCR 4.0.0
