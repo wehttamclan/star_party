@@ -13,7 +13,7 @@ describe 'nasa api endpoints' do
     end
 
     if apod_json[:hdurl]
-    expect(apod_json[:hdurl]).to be_a String
+      expect(apod_json[:hdurl]).to be_a String
     end
 
   end
