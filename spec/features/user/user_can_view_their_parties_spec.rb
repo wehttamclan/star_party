@@ -15,16 +15,26 @@ feature "As an authenticated user" do
         party_6 = create(:party)
 
         party_2.users << user
-        party_4.users << user
         party_6.users << user
 
         visit '/dashboard'
 
         within('.hosted') do
-          expect(page).to have_content(party_1.name)
+          expect(page).to have_content(party_1.title)
           expect(page).to have_content(party_1.date)
-          
+          expect(page).to have_content(party_5.title)
+          expect(page).to have_content(party_5.date)
         end
+
+        within('.attending') do
+          expect(page).to have_content(party_2.title)
+          expect(page).to have_content(party_2.date)
+          expect(page).to have_content(party_6.title)
+          expect(page).to have_content(party_6.date)
+        end
+
+        expect(page).to_not have_content(party_3.title)
+        expect(page).to_not have_content(party_4.title)
       end
     end
   end
