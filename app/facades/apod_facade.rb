@@ -1,11 +1,15 @@
 class ApodFacade
 
   def source
-    if return_json[:hdurl]
-      return return_json[:hdurl]
-    else
-      return "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Hubble_ultra_deep_field_high_rez_edit1.jpg/768px-Hubble_ultra_deep_field_high_rez_edit1.jpg"
-    end
+    apod_background || default_background
+  end
+    
+  def apod_background
+    return_json[:hdurl]
+  end
+
+  def default_background
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Hubble_ultra_deep_field_high_rez_edit1.jpg/768px-Hubble_ultra_deep_field_high_rez_edit1.jpg"
   end
 
   def title
