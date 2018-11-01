@@ -24,7 +24,7 @@ feature 'As a user' do
     fill_in :party_description, with: 'Party under the stars.'
     fill_in :party_street_address, with: '9357 W 26th Ave'
     fill_in :party_city, with: 'Wheat Ridge'
-    select 'Colorado', from: :state
+    select 'Colorado', from: 'party[state]'
 
     VCR.use_cassette("click create a star party", :allow_unused_http_interactions => false) do
       click_on 'Create a Star Party'

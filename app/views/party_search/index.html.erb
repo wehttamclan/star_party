@@ -5,7 +5,9 @@
     <h5 class="title"><%= party.title %></h5>
     <div class="index-card">
       <div class="location party"><strong>What: </strong><%= party.description %></div>
-      <div class="date party"><strong>When: </strong><%= party.view_date %></div>
+      <div class="date party"><strong>Date: </strong><%= party.view_date %></div>
+      <div class="date party"><strong>Time: <%= party.view_time %></div>
+
       <div class="description party"><strong>Where: </strong><%= party.location %></div>
       <div><%= link_to "View Party Details", party_path(party), class: 'create-button' %></div>
     </div>
