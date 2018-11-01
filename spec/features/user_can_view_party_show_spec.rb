@@ -15,7 +15,8 @@ feature 'As an authenticated user' do
       end
 
       expect(page).to have_content(@fun_party.title)
-      expect(page).to have_content("Date: #{@fun_party.date.strftime('%A, %b %d')}")
+      expect(page).to have_content("Date: #{@fun_party.view_date}")
+      expect(page).to have_content("Time: #{@fun_party.view_time}")
       expect(page).to have_content(@fun_party.description)
       expect(page).to have_content("Hosted By: #{@fun_party.host.name}")
 
