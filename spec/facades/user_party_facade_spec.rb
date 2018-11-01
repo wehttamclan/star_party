@@ -28,7 +28,14 @@ describe UserPartyFacade do
     context '#hosting' do
       it 'should return array of parties that user is hosting' do
         expected = [@party_1, @party_5]
-        expect(@user.hosting).to eq(expected)
+        expect(@facade.hosting).to eq(expected)
+      end
+    end
+
+    context '#attending' do
+      it 'should return array of parties that user is attending' do
+        expected = [@party_2, @party_6]
+        expect(@facade.attending).to eq(expected)
       end
     end
 
