@@ -8,6 +8,13 @@ body {
 .sub {
   font-size: 18px;
 }
+.sub2 {
+  font-size: 12px;
+}
+
+.splip {
+  margin-top: 90px;
+}
 
 .landing-body{
   position: relative;
@@ -46,6 +53,18 @@ body {
   box-shadow: -1px 2px 8px #000000;
   font-family: 'Athiti', sans-serif;
 }
+
+.more-party-info {
+  font-size: 16px;
+  background-color: #202030;
+  color: #EAE0D5;
+  width: auto;
+  text-align: center;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  padding: 0px 10px 0px 10px
+}
+
 
 .login-button {
   font-size: 32px;
@@ -114,6 +133,22 @@ body {
   font-family: 'Athiti', sans-serif;
 }
 
+.party-list {
+  padding-left: 20px;
+  text-decoration: underline;
+  color: #EAE0D5;
+}
+
+.party-list a:link{
+  color: #EAE0D5;
+}
+
+.party-list a:visited{
+  color: #C69A67;
+}
+
+
+
 .google-log {
   font-size: 20px;
   background-color: white;
@@ -160,6 +195,37 @@ body {
   width: auto;
   text-align: center;
   z-index: 10;
+}
+.title-dash {
+  font-size: 28px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+  margin: 50px 10px 10px 10px;
+  width: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.party-title {
+  font-size: 28px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+  margin: 0px 10px 0px 10px;
+  width: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.party-card {
+    margin-top: 60px;
 }
 
 .title-like {
@@ -226,6 +292,7 @@ body {
   border-radius: 10px;
   opacity: 0.85;
   border-color: #202030;
+
   font-family: 'Athiti', sans-serif;
   padding: 1px 6px 1px 6px;
   margin-top: 15px;
@@ -244,6 +311,10 @@ body {
   box-shadow: inset -1px 2px 4px #161621;
 }
 
+.pad-left {
+  padding-left: 20px;
+}
+
 .index-card {
   font-family: 'Athiti', sans-serif;
   color: #EAE0D5;
@@ -251,7 +322,7 @@ body {
   border-radius: 7px;
   margin: 0px 10px 0px 10px;
   width: 95%;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 5px 5px 0px;
   box-shadow: inset -1px 2px 4px #161621;
 }
 
@@ -312,15 +383,6 @@ p {
 }
 
 .party-card {
-  font-family: 'Athiti', sans-serif;
-  font-size: 20px;
-  color: #EAE0D5;
-  background-color: #455777;
-  border-radius: 7px;
-  width: 95%;
-  padding: 5px 0px 5px 0px;
-  box-shadow: inset -1px 2px 4px #161621;
-  justify-content: space-between;
   }
 
   .party-card ul {

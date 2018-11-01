@@ -1,13 +1,12 @@
-<h1><%= @party.title %><h1>
-
-<div class='party-card'>
-  <ul>
-    <li class='date'>Date: <%= @party.view_date %></li>
-    <li class='date'>Time: <%= @party.view_time %></li>
-    <li class='description'><%= @party.description %></li>
+<h1 class="title"><%= @party.title %><h1>
+<div class='index-card party-show-card'>
+<div class="pad-left">
+    <h4 class='date'>Date: <%= @party.view_date %></h4>
+    <h4 class='date'>Time: <%= @party.view_time %></h4>
+    <h4 class='description'><%= @party.description %></h4>
     <% if current_user %>
-      <li class='address'>Address: <%= @party.street_address %>, <%= @party.city %></li>
-      <li class='host'>Hosted By: <%= @party.host.name %></li>
+      <h4 class='address'>Address: <%= @party.street_address %>, <%= @party.city %></h4>
+      <h4 class='host'>Hosted By: <%= @party.host.name %></h4>
     <% end %>
   </ul>
 </div>
@@ -22,8 +21,9 @@
       <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button' %></p>
     <% end %>
   <% else %>
-    <p>Please log in to view party details and to rsvp.</p>
+    <h6 class="pad-left">Please log in to view</br> party details and to rsvp.</h6>
   <% end %>
 </div>
 
-<%= link_to "Back to all Parties in #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'create-button btn' %>
+<%= link_to "Back to all Parties near #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'more-party-info' %>
+</div>
