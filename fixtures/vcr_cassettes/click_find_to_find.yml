@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 31 Oct 2018 20:33:28 GMT
+      - Thu, 01 Nov 2018 20:23:34 GMT
       Server:
       - Apache/2.4.29 (Ubuntu)
       Access-Control-Allow-Origin:
@@ -43,7 +43,7 @@ http_interactions:
       string: !binary |-
         W3sicGxhY2VfaWQiOiIyMDA0MDI0MDciLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJib3VuZGluZ2JveCI6WyIzOS43MzY4NDYwODM4MjkiLCIzOS43MzY5NDYwODM4MjkiLCItMTA0Ljk4MzkyNjg0Mjg0IiwiLTEwNC45ODM4MjY4NDI4NCJdLCJsYXQiOiIzOS43MzY4OTYwODM4Mjg3IiwibG9uIjoiLTEwNC45ODM4NzY4NDI4MzYiLCJkaXNwbGF5X25hbWUiOiJEZW52ZXIsIENvbG9yYWRvLCA4MDIwMywgVVNBIiwiY2xhc3MiOiJwbGFjZSIsInR5cGUiOiJwb3N0Y29kZSIsImltcG9ydGFuY2UiOjAuMzM1LCJhZGRyZXNzIjp7ImNpdHkiOiJEZW52ZXIiLCJzdGF0ZSI6IkNvbG9yYWRvIiwicG9zdGNvZGUiOiI4MDIwMyIsImNvdW50cnkiOiJVU0EiLCJjb3VudHJ5X2NvZGUiOiJ1cyJ9fSx7InBsYWNlX2lkIjoiMjAwMzYwMjg5IiwibGljZW5jZSI6IkRhdGEgwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMsIE9EYkwgMS4wLiBodHRwczpcL1wvb3NtLm9yZ1wvY29weXJpZ2h0IiwiYm91bmRpbmdib3giOlsiNTAuMzAyNDI5IiwiNTAuMzAyNTI5IiwiMjQuNTk3NzkzIiwiMjQuNTk3ODkzIl0sImxhdCI6IjUwLjMwMjQ3OSIsImxvbiI6IjI0LjU5Nzg0MyIsImRpc3BsYXlfbmFtZSI6ItCf0L7Qu9C+0LLQtdGG0YzQutCwINGB0ZbQu9GM0YHRjNC60LAg0YDQsNC00LAsIEx2aXYgT2JsYXN0LCA4MDIwMywgVWtyYWluZSIsImNsYXNzIjoicGxhY2UiLCJ0eXBlIjoicG9zdGNvZGUiLCJpbXBvcnRhbmNlIjowLjMzNSwiYWRkcmVzcyI6eyJjaXR5Ijoi0J/QvtC70L7QstC10YbRjNC60LAg0YHRltC70YzRgdGM0LrQsCDRgNCw0LTQsCIsInN0YXRlIjoiTHZpdiBPYmxhc3QiLCJwb3N0Y29kZSI6IjgwMjAzIiwiY291bnRyeSI6IlVrcmFpbmUiLCJjb3VudHJ5X2NvZGUiOiJ1YSJ9fSx7InBsYWNlX2lkIjoiMjc2OTI1MzYiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6Im5vZGUiLCJvc21faWQiOiIyNjMzMjE3MDI0IiwiYm91bmRpbmdib3giOlsiLTguMDU1Mjc0IiwiLTguMDU1MTc0IiwiLTM0Ljk0MTgxOTQiLCItMzQuOTQxNzE5NCJdLCJsYXQiOiItOC4wNTUyMjQiLCJsb24iOiItMzQuOTQxNzY5NCIsImRpc3BsYXlfbmFtZSI6IjgwMjAzLCBSdWEgQW50w7RuaW8gQ3VyYWRvLCBFbmdlbmhvIGRvIE1laW8sIFJlY2lmZSwgTWljcm9ycmVnacOjbyBkZSBSZWNpZmUsIFJlZ2nDo28gTWV0cm9wb2xpdGFuYSBkZSBSZWNpZmUsIE1lc29ycmVnacOjbyBNZXRyb3BvbGl0YW5hIGRlIFJlY2lmZSwgUGVybmFtYnVjbywgTm9ydGhlYXN0IFJlZ2lvbiwgNTA2NzAtNTAwLCBCcmF6aWwiLCJjbGFzcyI6ImhpZ2h3YXkiLCJ0eXBlIjoiYnVzX3N0b3AiLCJpbXBvcnRhbmNlIjowLjExMTAwMDAwMDAwMDAwMDAyLCJpY29uIjoiaHR0cHM6XC9cL25vbWluYXRpbS5vcGVuc3RyZWV0bWFwLm9yZ1wvaW1hZ2VzXC9tYXBpY29uc1wvdHJhbnNwb3J0X2J1c19zdG9wMi5wLjIwLnBuZyIsImFkZHJlc3MiOnsiYnVzX3N0b3AiOiI4MDIwMyIsInJvYWQiOiJSdWEgQW50w7RuaW8gQ3VyYWRvIiwic3VidXJiIjoiRW5nZW5obyBkbyBNZWlvIiwiY2l0eV9kaXN0cmljdCI6IlJlY2lmZSIsImNpdHkiOiJSZWNpZmUiLCJjb3VudHkiOiJNaWNyb3JyZWdpw6NvIGRlIFJlY2lmZSIsInN0YXRlX2Rpc3RyaWN0IjoiTWVzb3JyZWdpw6NvIE1ldHJvcG9saXRhbmEgZGUgUmVjaWZlIiwic3RhdGUiOiJQZXJuYW1idWNvIiwicG9zdGNvZGUiOiI1MDY3MC01MDAiLCJjb3VudHJ5IjoiQnJhemlsIiwiY291bnRyeV9jb2RlIjoiYnIifX0seyJwbGFjZV9pZCI6IjIwNTQwMjIiLCJsaWNlbmNlIjoiRGF0YSDCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycywgT0RiTCAxLjAuIGh0dHBzOlwvXC9vc20ub3JnXC9jb3B5cmlnaHQiLCJvc21fdHlwZSI6Im5vZGUiLCJvc21faWQiOiIzNDE4NzE4MzciLCJib3VuZGluZ2JveCI6WyI1My44OTM4ODU2IiwiNTMuODkzOTg1NiIsIjI3LjQ4MDI3NDYiLCIyNy40ODAzNzQ2Il0sImxhdCI6IjUzLjg5MzkzNTYiLCJsb24iOiIyNy40ODAzMjQ2IiwiZGlzcGxheV9uYW1lIjoi0JHQtdC70YzRgdC60LDQs9CwLCDRg9C70LjRhtCwINCf0L7QvdC+0LzQsNGA0LXQvdC60L4sINCi0LjQstCw0LvQuCwgTWlhZHp2aWXFvnluYSwgRnJ1bnp5ZW5za2kgRGlzdHJpY3QsIE1pbnNrLCAyMjAwMTUsIEJlbGFydXMiLCJjbGFzcyI6ImhpZ2h3YXkiLCJ0eXBlIjoiYnVzX3N0b3AiLCJpbXBvcnRhbmNlIjowLjAwMSwiaWNvbiI6Imh0dHBzOlwvXC9ub21pbmF0aW0ub3BlbnN0cmVldG1hcC5vcmdcL2ltYWdlc1wvbWFwaWNvbnNcL3RyYW5zcG9ydF9idXNfc3RvcDIucC4yMC5wbmciLCJhZGRyZXNzIjp7ImJ1c19zdG9wIjoi0JHQtdC70YzRgdC60LDQs9CwIiwicm9hZCI6ItGD0LvQuNGG0LAg0J/QvtC90L7QvNCw0YDQtdC90LrQviIsIm5laWdoYm91cmhvb2QiOiLQotC40LLQsNC70LgiLCJzdWJ1cmIiOiJNaWFkenZpZcW+eW5hIiwiY2l0eV9kaXN0cmljdCI6IkZydW56eWVuc2tpIERpc3RyaWN0IiwiY2l0eSI6Ik1pbnNrIiwicG9zdGNvZGUiOiIyMjAwMTUiLCJjb3VudHJ5IjoiQmVsYXJ1cyIsImNvdW50cnlfY29kZSI6ImJ5In19XQ==
     http_version: 
-  recorded_at: Wed, 31 Oct 2018 20:33:28 GMT
+  recorded_at: Thu, 01 Nov 2018 20:23:34 GMT
 - request:
     method: get
     uri: https://api.nasa.gov/planetary/apod?api_key=oZooGV3jttBqMMbqL2qGz5PZwWS0HProICaJmTGk
@@ -65,7 +65,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 31 Oct 2018 20:33:28 GMT
+      - Thu, 01 Nov 2018 20:23:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -77,11 +77,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '1000'
       X-Ratelimit-Remaining:
-      - '984'
+      - '980'
       Via:
       - 1.1 vegur, http/1.1 api-umbrella (ApacheTrafficServer [cMsSf ])
       Age:
-      - '0'
+      - '1'
       X-Cache:
       - MISS
       Access-Control-Allow-Origin:
@@ -90,27 +90,22 @@ http_interactions:
       - max-age=31536000; preload
     body:
       encoding: ASCII-8BIT
-      string: '{"copyright":"Martin Pugh","date":"2018-10-31","explanation":"Better
-        known as Hind''s Crimson Star, R Leporis is a rare star in planet Earth''s
-        night sky. It''s also a shocking shade of red. The star''s discoverer, 19th
-        century English astronomer John Russell Hind, reported that it appeared in
-        a telescope \"... like a drop of blood on a black field.\" Located 1,360 light-years
-        away in the constellation Lepus the star is a Mira-type variable, changing
-        its brightness over a period of about 14 months. R Leporis is now recognized
-        as a carbon star, a very cool and highly evolved red giant with an extreme
-        abundance of carbon. Extra carbon in carbon stars is created by helium fusion
-        near the dying stellar core and dredged up into the stars'' outer layers.
-        The dredge-up results in an overabundance of simple carbon molecules, like
-        CO, CH, CN, and C2. While it''s true that cool stars radiate most of their
-        energy in red and infrared light, the carbon molecules strongly absorb what
-        little blue light is left and give carbon stars an exceptionally deep red
-        color.  R Leporis is losing its carbon-rich atmosphere into the surrounding
-        interstellar material through a strong stellar wind though, and could be near
-        the transition to a planetary nebula. Oh, and Happy Halloween from the folks
-        at APOD.","hdurl":"https://apod.nasa.gov/apod/image/1811/RLeporisMP.jpg","media_type":"image","service_version":"v1","title":"R
-        Leporis: A Vampire''s Star","url":"https://apod.nasa.gov/apod/image/1811/RLeporisMP1024.jpg"}
+      string: '{"date":"2018-11-01","explanation":"Will spacecraft Hayabusa2 be able
+        to land safely on asteroid Ryugu? Since arriving in June, pictures show that
+        the surface of kilometer-sized Ryugu is covered with boulders, so that finding
+        a flat enough area for the bus-sized spacecraft to touch down is proving a
+        challenge. In the featured video, the shadow of Japan''s robotic Hayabusa2
+        can be seen on the rugged face of Ryugu while ascending last week from a touchdown
+        rehearsal only 20 meters over the surface.  Previously, small frisbee-sized
+        landers detached from Hayabusa2, made contact with the diamond-shaped asteroid''s
+        surface, and started hopping around.  Studying Ryugu could tell humanity not
+        only about the minor planet''s surface and interior, but about what materials
+        were available in the early Solar System for the development of life.  The
+        touchdown of the Hayabusa2 mother ship is slated for early next year, hopefully
+        followed by a soil sample collection for return to Earth.","media_type":"video","service_version":"v1","title":"Hayabusa2
+        Ascends from Asteroid Ryugu","url":"https://www.youtube.com/embed/tEPQ-DuSViQ?rel=0"}
 
 '
     http_version: 
-  recorded_at: Wed, 31 Oct 2018 20:33:28 GMT
+  recorded_at: Thu, 01 Nov 2018 20:23:35 GMT
 recorded_with: VCR 4.0.0

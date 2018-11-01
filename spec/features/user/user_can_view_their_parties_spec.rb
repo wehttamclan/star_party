@@ -24,16 +24,16 @@ feature "As an authenticated user" do
 
         within('.hosted') do
           expect(page).to have_content(@party_1.title)
-          expect(page).to have_content(@party_1.date)
+          expect(page).to have_content(@party_1.view_date)
           expect(page).to have_content(@party_5.title)
-          expect(page).to have_content(@party_5.date)
+          expect(page).to have_content(@party_5.view_date)
         end
 
         within('.attending') do
           expect(page).to have_content(@party_2.title)
-          expect(page).to have_content(@party_2.date)
+          expect(page).to have_content(@party_2.view_date)
           expect(page).to have_content(@party_6.title)
-          expect(page).to have_content(@party_6.date)
+          expect(page).to have_content(@party_6.view_date)
         end
 
         expect(page).to_not have_content(@party_3.title)
