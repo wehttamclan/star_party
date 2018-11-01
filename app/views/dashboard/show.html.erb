@@ -1,1 +1,24 @@
 <h1 class='title' >Welcome, <%= @user.name %></h1>
+
+<div>
+  <h2 class='title'>Parties I am Hosting:</h2>
+  <div class='hosted'>
+    <% @user_parties.hosting.each do |hosted_party| %>
+      <div><%= hosted_party.title %><div>
+      <div><%= hosted_party.view_date %><div>
+      <div><%= hosted_party.view_time %><div>
+    <% end %>
+  </div>
+</div>
+
+
+<div>
+  <h2 class='title'>Parties I am Attending:</h2>
+  <div class='attending'>
+    <% @user_parties.attending.each do |party| %>
+      <div><%= party.title %><div>
+      <div><%= party.view_date %><div>
+      <div><%= party.view_time %><div>
+    <% end %>
+  </div>
+</div>
