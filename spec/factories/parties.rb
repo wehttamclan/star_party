@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :party do
     title { "Sample Title" }
-    date { "01-01-2019" }
+    date { "2018-11-01 10:54:47" }
     description { "Viewing the Sample Celestial Event" }
     street_address { "1000 Sample Road" }
     city { "Sampleville" }
