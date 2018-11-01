@@ -13,7 +13,9 @@ Built by:
 
 To use the app, simply visit https://star-party.herokuapp.com/ and start browsing around!
 
-You can also clone down this repo and play with the code! 
+You can sign in with Google (using OAuth) or you can create an account on the app.
+
+Feel free to clone down this repo and play with the code! 
 
 * Technologies used:
   - Ruby 2.4.2
@@ -29,11 +31,14 @@ You can also clone down this repo and play with the code!
   
   To user our app on your local, you will need these API Keys:
     - https://api.nasa.gov/index.html#apply-for-an-api-key (can be requested for free)
-      - NASA API used to pull the background image, the NASA Astronomy Picture of the Day.
+      - NASA API used to pull the background image, the NASA Astronomy Picture of the Day stored as `NASA_API_KEY`
+Y
     - https://darksky.net/dev/docs (can be resquested for free)
-      - Dark Sky API used for all weather and moon related information.
+      - Dark Sky API used for all weather and moon related information stored as `darksky_api_key`
     - https://www.twilio.com/docs/sms/quickstart/ruby
-      - Twilio used for sending text messages.
+      - Twilio used for sending text messages stored as `twilio_account_sid`, `twilio_auth_token`, and `twilio_phone_number`
+    - https://developers.google.com/identity/protocols/OAuth2
+      - Google OAuth used to sign in users. You'll need to add a `GOOGLE_CLIENT_ID` and a `GOOGLE_CLIENT_SECRET`
   
 
 * Configuration
