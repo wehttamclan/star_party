@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :party do
-    title { Faker::MichaelScott.quote }
+    title { Faker::Book.title }
     date { "2018-11-01 10:54:47" }
     description { "Viewing the Sample Celestial Event" }
     street_address { "1000 Sample Road" }
