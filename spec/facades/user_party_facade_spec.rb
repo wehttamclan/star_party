@@ -24,5 +24,15 @@ describe UserPartyFacade do
     expect(@facade).to be_a(UserPartyFacade)
   end
 
+  context '#instance methods' do
+    context '#hosting' do
+      it 'should return array of parties that user is hosting' do
+        expected = [@party_1, @party_5]
+        expect(@user.hosting).to eq(expected)
+      end
+    end
+
+  end
+
 
 end
