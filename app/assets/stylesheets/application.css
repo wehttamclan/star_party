@@ -77,6 +77,18 @@ body {
   font-family: 'Athiti', sans-serif;
 }
 
+.party-buttons {
+  font-size: 20px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border: 0px;
+  padding: 5px;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+}
+
 .button-holder .form-control {
   text-align: center;
   font-size: 24px;
