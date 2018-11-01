@@ -20,7 +20,7 @@ describe 'visitor searches for parties' do
       expect(page).to have_css(".party-card", count: 5)
 
       within(first(".party-card")) do
-        expect(page).to have_css(".title")
+        expect(page).to have_css(".party-title")
         expect(page).to have_css(".date")
         expect(page).to have_css(".description")
         expect(page).to have_css(".location")

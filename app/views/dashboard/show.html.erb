@@ -1,24 +1,20 @@
 <h1 class='title' >Welcome, <%= @user.name %></h1>
 
 <div>
-  <h2 class='title'>Parties I am Hosting:</h2>
-  <div class='hosted'>
+  <h2 class='title-dash'>Parties I am Hosting:</h2>
+  <div class='hosted index-card'>
     <% @user_parties.hosting.each do |hosted_party| %>
-      <div><%= hosted_party.title %><div>
-      <div><%= hosted_party.view_date %><div>
-      <div><%= hosted_party.view_time %><div>
+      <div class='party-list'><a href="<%= party_path(hosted_party) %>"><%= hosted_party.title %> / <%= hosted_party.view_date %> / <%= hosted_party.view_time %></a></div>
     <% end %>
   </div>
 </div>
 
 
 <div>
-  <h2 class='title'>Parties I am Attending:</h2>
-  <div class='attending'>
+  <h2 class='title-dash'>Parties I am Attending:</h2>
+  <div class='attending party-list index-card'>
     <% @user_parties.attending.each do |party| %>
-      <div><%= party.title %><div>
-      <div><%= party.view_date %><div>
-      <div><%= party.view_time %><div>
+      <div class='party-list'><a href="<%= party_path(party) %>"><%= party.title %> / <%= party.view_date %> / <%= party.view_time %></a></div>
     <% end %>
   </div>
 </div>
