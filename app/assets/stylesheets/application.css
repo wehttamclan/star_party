@@ -112,6 +112,12 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.new-p-form {
+  margin-top: 270px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
 .login-form {
   text-align: center;
 }
@@ -342,6 +348,10 @@ body {
 }
 
 .create-button {
+  margin-top: 30px;
+}
+
+.back-button {
   margin-top: 30px;
 }
 

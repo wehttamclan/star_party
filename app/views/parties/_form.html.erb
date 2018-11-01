@@ -2,7 +2,7 @@
 
 <div class="button-holder">
 <%= form_for @party, class: "form-inline" do |f| %>
-<div class="new-form">
+<div class="new-p-form">
 
   <div class="field">
     <%= f.text_field :title, placeholder: 'Title', class: "col-sm-2 form-field" %>
@@ -39,7 +39,7 @@
   <div class="create-button">
     <%= f.submit "Create a Star Party", class: "btn" %>
   </div>
-  <%= link_to "Back to Forecast Results", forecast_path(zip_code: @party.zip_code), class: 'btn create-button' %>
+  <%= link_to "Back to Forecast Results", forecast_path(zip_code: @party.zip_code), class: 'back-btn more-party-info' %>
   </div>
 <% end %>
 </div>
