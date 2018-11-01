@@ -2,7 +2,7 @@
 
 <div>
   <h2 class='title-dash'>Parties I am Hosting:</h2>
-  <div class='index-card'>
+  <div class='hosted index-card'>
     <% @user_parties.hosting.each do |hosted_party| %>
       <div class='party-list'><a href="<%= party_path(hosted_party) %>"><%= hosted_party.title %> / <%= hosted_party.view_date %> / <%= hosted_party.view_time %></a></div>
     <% end %>
@@ -12,7 +12,7 @@
 
 <div>
   <h2 class='title-dash'>Parties I am Attending:</h2>
-  <div class='party-list index-card'>
+  <div class='attending party-list index-card'>
     <% @user_parties.attending.each do |party| %>
       <div class='party-list'><a href="<%= party_path(party) %>"><%= party.title %> / <%= party.view_date %> / <%= party.view_time %></a></div>
     <% end %>
