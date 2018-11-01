@@ -38,8 +38,5 @@ describe UserPartyFacade do
         expect(@facade.attending).to eq(expected)
       end
     end
-
   end
-
-
 end
