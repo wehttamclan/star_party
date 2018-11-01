@@ -18,7 +18,7 @@ class DayForecast
 
   def star_party_rating
     raw_score = moonscore + rain_chance + cloud_cover
-    (10 - ((raw_score + 1) * 2.5)).round(2)
+    (10 - ((raw_score) * 2.5)).round(2)
   end
 
   def image_tag
