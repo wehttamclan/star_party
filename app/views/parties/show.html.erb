@@ -17,6 +17,10 @@
       <p>You are attending this party.</p>
       <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'login-button' %></p>
       <p><%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'login-button' %></p>
+    <% elsif @party.host_id == current_user.id %>
+      <p>You are the host of this party!<p>
+      <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'login-button' %></p>
+      <p><%= link_to "Cancel Party", party_path(@party), method: :delete, class: 'login-button' %>
     <% else %>
       <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button' %></p>
     <% end %>
