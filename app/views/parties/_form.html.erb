@@ -10,7 +10,7 @@
 
   <div class="field">
   <div class="col-sm-2 form-field">
-    <%= time_select :party, 'date', prompt: {hour: 'Hour', minute: 'Minute'} %>
+    <%= time_select :time, :date, prompt: {hour: 'Hour', minute: 'Minute'}, minute_step: 5 %>
   </div>
   </div>
 

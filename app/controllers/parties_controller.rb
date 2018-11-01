@@ -4,7 +4,7 @@ class PartiesController < ApplicationController
   end
 
   def create
-    party = Party.new(party_params.merge(new_party_params))
+    party = Party.new(new_party_params.merge(party_params).merge(time_params))
     party.host_id = current_user.id
     coordinates = Geocoder.coordinates(party.address)
     party.latitude = coordinates[0]
@@ -29,5 +29,9 @@ class PartiesController < ApplicationController
 
   def new_party_params
     params.permit(:zip_code, :date)
+  end
+
+  def time_params
+    params.require(:time).permit(:date)
   end
 end
