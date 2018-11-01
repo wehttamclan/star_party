@@ -4,6 +4,14 @@ class PartySearchResult
   end
 
   def parties
-    @parties ||= Party.where('date >= ?', Date.today).near(@zip_code, 15)
+    @parties ||= (Party.where('date >= ?', Date.today).near(@zip_code, 15)).to_a
+
+    exact_zip = (Party.where(zip_code: @zip_code)).to_a
+    exact_zip.each do |party|
+      @parties << party
+    end
+
+    @parties.uniq
+
   end
 end
