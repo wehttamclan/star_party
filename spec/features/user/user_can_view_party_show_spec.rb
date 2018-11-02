@@ -46,10 +46,13 @@ feature 'As an authenticated user' do
       expect(page).to_not have_content("Attend")
       expect(page).to_not have_content("Cancel Attendance")
 
-      click_on "Cancel Party"
+      VCR.use_cassette("cancelled_dash") do
+        click_on "Cancel Party"
 
-      expect(current_path).to eq('/dashboard')
-      expect(page).to have_content("Your party was successfully cancelled.")
+        expect(current_path).to eq('/dashboard')
+        expect(page).to have_content("Your party was successfully cancelled.")
+        expect(page).to_not have_content(@fun_party.title)
+      end
     end
   end
 end

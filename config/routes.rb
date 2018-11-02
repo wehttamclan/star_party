@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get "/party_search", to: 'party_search#index'
 
-  resources :parties, only: [:new, :create, :show]
+  resources :parties, only: [:new, :create, :show, :destroy]
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   get '/auth/:provider/callback', to: 'sessions#create'
