@@ -24,6 +24,8 @@ feature 'As a user' do
     fill_in :party_description, with: 'Party under the stars.'
     fill_in :party_street_address, with: '9357 W 26th Ave'
     fill_in :party_city, with: 'Wheat Ridge'
+    select 11, from: :time_date_4i
+    select 15, from: :time_date_5i
     select 'Colorado', from: 'party[state]'
 
     VCR.use_cassette("click create a star party", :allow_unused_http_interactions => false) do
@@ -31,6 +33,7 @@ feature 'As a user' do
     end
 
     expect(current_path).to eq '/parties/1'
+    expect(page).to have_content "11:15 AM"
     expect(Party.last.latitude).to_not be(nil)
     expect(Party.last.longitude).to_not be(nil)
   end
