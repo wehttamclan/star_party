@@ -36,14 +36,12 @@ feature 'As an authenticated user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 
       VCR.use_cassette("create standard party") do
-        @fun_party = create(:party)
+        @fun_party = create(:party, host_id: user.id)
       end
 
       VCR.use_cassette("visit ANOTHER party") do
         visit "/parties/#{@fun_party.id}"
       end
-
-      @fun_party.host_id = user.id
 
       expect(page).to_not have_content("Attend")
       expect(page).to_not have_content("Cancel Attendance")
