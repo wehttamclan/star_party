@@ -41,6 +41,17 @@ class PartiesController < ApplicationController
     @party.attendance(current_user, params[:attendance]) if params[:attendance]
   end
 
+  def destroy
+    party = Party.find(params[:id])
+    if party.destroy
+      flash[:notice] = "Your party was successfully cancelled."
+      redirect_to '/dashboard'
+    else
+      flash[:alert] = "Something went wrong, your party wasn't cancelled."
+      render :show
+    end
+  end
+
   private
   def party_params
     params.require(:party).permit(:title, :description, :date, :street_address, :city, :zip_code, :state)

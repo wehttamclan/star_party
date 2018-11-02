@@ -34,6 +34,8 @@ feature "As an authenticated user" do
           expect(page).to have_content(@party_2.view_date)
           expect(page).to have_content(@party_6.title)
           expect(page).to have_content(@party_6.view_date)
+          expect(page).to_not have_content(@party_1.title)
+          expect(page).to_not have_content(@party_5.title)
         end
 
         expect(page).to_not have_content(@party_3.title)
