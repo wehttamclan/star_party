@@ -4,14 +4,22 @@
 
 <%= form_tag :text, method: :post %>
 
-<%= label_tag :friend_name, "Friend's Name" %>
-<%= text_field_tag :friend_name %>
+<div class="login-form">
+  <div class="field">
+    <%= text_field_tag :friend_name, nil, placeholder: "Friend's Name", class: "form-field"%>
+  </div>
 
-<%= label_tag :phone_number, "Friend's Phone Number" %>
-<%= number_field_tag :phone_number %>
+  <div class="field">
+    <%= number_field_tag :phone_number, nil, placeholder: "Friend's Phone Number", class: "form-field" %>
+  </div>
 
-<%= hidden_field_tag 'party_id', @party_id %>
+  <div class="field">
+    <%= hidden_field_tag 'party_id', @party_id %>
+  </div>
 
-<%= submit_tag "Submit" %>
-
-<%= link_to "Nevermind", party_path(@party_id), class: 'create-button' %>
+  <div class="create-button">
+    <%= submit_tag "Submit", class: "login-button" %>
+  </div>
+  <br>
+  <%= link_to "Go Back", party_path(@party_id), class: "more-party-info" %>
+</div>
