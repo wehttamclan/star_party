@@ -10,8 +10,10 @@ class PartiesController < ApplicationController
 
   def create
     if current_user
-      party = Party.new(new_party_params.merge(party_params).merge(time_params))
+      party = Party.new(party_params)
       party.host_id = current_user.id
+      time = { hour: time_params["date(4i)"], min: time_params["date(5i)"] }
+      party.update(date: party.date.change(time))
       if Geocoder.coordinates(party.address)
         coordinates = Geocoder.coordinates(party.address)
         party.latitude = coordinates[0]
