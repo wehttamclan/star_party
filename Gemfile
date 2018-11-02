@@ -41,6 +41,7 @@ gem 'area'
 gem 'geocoder'
 gem 'omniauth-google-oauth2'
 gem 'twilio-ruby'
+gem 'newrelic_rpm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
