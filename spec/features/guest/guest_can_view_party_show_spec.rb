@@ -17,7 +17,9 @@ feature 'As an guest user' do
       expect(page).to have_content(@fun_party.description)
       expect(page).to have_content("Please log in to view party details and to rsvp.")
       expect(page).to_not have_content("Hosted By: #{@fun_party.host.name}")
-      expect(page).to_not have_content("Attend")
+      within(".party-show-card") do
+        expect(page).to_not have_content("Attend")
+      end 
     end
   end
 end

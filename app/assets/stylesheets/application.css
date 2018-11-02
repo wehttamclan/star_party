@@ -44,6 +44,32 @@ body {
   text-align: right;
 }
 
+.attendee-title {
+  font-size: 28px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+  margin: 20px 10px 10px 10px;
+  width: auto;
+  text-align: center;
+  z-index: 10;
+}
+
+.attendee-card {
+  font-family: 'Athiti', sans-serif;
+  font-size: 22px;
+  color: #EAE0D5;
+  background-color: #455777;
+  border-radius: 7px;
+  margin: auto;
+  width: 95%;
+  padding: 5px 0px 5px 0px;
+  box-shadow: inset -1px 2px 4px #161621;
+}
+
 .button-holder .btn {
   font-size: 32px;
   background-color: #202030;
@@ -71,6 +97,18 @@ body {
   background-color: #202030;
   color: #EAE0D5;
   border: 0px;
+  border-radius: 10px;
+  opacity: 0.9;
+  box-shadow: -1px 2px 8px #000000;
+  font-family: 'Athiti', sans-serif;
+}
+
+.party-buttons {
+  font-size: 20px;
+  background-color: #202030;
+  color: #EAE0D5;
+  border: 0px;
+  padding: 5px;
   border-radius: 10px;
   opacity: 0.9;
   box-shadow: -1px 2px 8px #000000;

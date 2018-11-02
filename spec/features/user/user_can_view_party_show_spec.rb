@@ -43,7 +43,7 @@ feature 'As an authenticated user' do
         visit "/parties/#{@fun_party.id}"
       end
 
-      expect(page).to_not have_content("Attend")
+      expect(page).to_not have_css(".attend")
       expect(page).to_not have_content("Cancel Attendance")
 
       VCR.use_cassette("cancelled_dash") do

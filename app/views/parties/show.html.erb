@@ -22,7 +22,7 @@
       <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'login-button' %></p>
       <p><%= link_to "Cancel Party", party_path(@party), method: :delete, class: 'login-button' %>
     <% else %>
-      <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button' %></p>
+      <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button attend' %></p>
     <% end %>
   <% else %>
     <h6 class="pad-left">Please log in to view</br> party details and to rsvp.</h6>
@@ -30,4 +30,11 @@
 </div>
 
 <%= link_to "Back to all Parties near #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'more-party-info' %>
+</div>
+<br>
+<div class="attendee-title">Attendees</div>
+<div>
+  <% @party.users.each do |user| %>
+    <div class="pad-left attendee-card"><%= user.name %></div>
+  <% end %>
 </div>
