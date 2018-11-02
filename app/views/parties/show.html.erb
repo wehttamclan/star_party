@@ -15,7 +15,7 @@
   <% if current_user %>
     <% if current_user.parties.include?(@party) %>
       <h4 class="pad-left">You are attending this party.</h4>
-      
+
       <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'party-buttons' %></p>
       <p><%= link_to "Cancel Attendance", party_path(@party, attendance: "cancel"), class: 'party-buttons' %></p>
     <% else %>
@@ -27,4 +27,11 @@
 </div>
 
 <%= link_to "Back to all Parties near #{@party.zip_code}", party_search_path(q_find: @party.zip_code), class: 'more-party-info' %>
+</div>
+<br>
+<div class="attendee-title">Attendees</div>
+<div>
+  <% @party.users.each do |user| %>
+    <div class="pad-left attendee-card"><%= user.name %></div>
+  <% end %>
 </div>
