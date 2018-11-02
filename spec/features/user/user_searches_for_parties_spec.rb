@@ -69,7 +69,7 @@ describe 'visitor searches for parties' do
       VCR.use_cassette("visit root") do
         visit '/'
       end
-      
+
       fill_in :q_find, with: 80203
       VCR.use_cassette("find to not show far parties") do
         find(".find", visible: false).click
