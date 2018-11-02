@@ -20,7 +20,8 @@
     <% elsif @party.host_id == current_user.id %>
       <p>You are the host of this party!<p>
       <p><%= link_to "Text a friend!", text_path(party_id: @party), class: 'login-button' %></p>
-      <p><%= link_to "Cancel Party", party_path(@party), method: :delete, class: 'login-button' %>
+      <p><%= link_to "Cancel Party", party_path(@party), method: :delete, class: 'login-button',
+        data: {confirm: "Are you sure you want to cancel this party?" }%>
     <% else %>
       <p><%= link_to "Attend", party_path(@party, attendance: "attend"), class: 'login-button attend' %></p>
     <% end %>
