@@ -28,11 +28,12 @@ feature "As an authenticated user" do
 
     invalid_zip = 87822
     fill_in :zip_code, with: invalid_zip
+
     VCR.use_cassette("click plan") do
       find(".plan-party", visible: false).click
-    end
 
     expect(current_path).to eq('/')
-    expect(page).to have_content("Sorry, no data for that zip code.")
+    expect(page).to have_content("Sorry, no data for #{invalid_zip}. Please try again.")
+    end
   end
 end
