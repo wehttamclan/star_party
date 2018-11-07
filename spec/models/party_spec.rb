@@ -10,7 +10,7 @@ describe Party, type: :model do
   describe 'relationships' do
     it { should belong_to(:host) }
     it { should have_many(:user_parties) }
-    it { should have_many(:users), through: :user_parties }
+    it { should have_many(:users) }
   end
 
   describe 'instance methods' do
