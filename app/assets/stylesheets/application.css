@@ -228,6 +228,10 @@ body {
   position: inline;
 }
 
+th {
+  text-decoration: underline;
+}
+
 .title {
   font-size: 28px;
   background-color: #202030;
