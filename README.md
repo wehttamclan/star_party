@@ -5,7 +5,7 @@ This project was developed out of a need and desire to create more interest and 
 
 Built by:
 - Becca Hyland: github.com/BeccaHyland
-- Ben Ghalami: github.com/bghalmi
+- Ben Ghalami: github.com/bghalami
 - Matt Peters: github.com/wehttamclan
 - Kathleen Yruegas: github.com/KathleenYruegas
 
