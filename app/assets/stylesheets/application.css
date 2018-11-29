@@ -1,5 +1,5 @@
 body {
-   background-position: center;
+   background-position: right;
    background-attachment: fixed;
    background-size: cover;
    background-repeat: no-repeat;
@@ -230,6 +230,7 @@ body {
 
 th {
   text-decoration: underline;
+  font-weight: : 16px;
 }
 
 .title {
@@ -441,11 +442,3 @@ p {
   .party-card ul {
     list-style-type: none;
   }
-
-.invalid {
-	border: 2px solid red;
-}
-
-.valid {
-	border: 2px solid green;
-}
