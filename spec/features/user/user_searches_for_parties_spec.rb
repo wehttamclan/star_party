@@ -32,7 +32,7 @@ describe 'visitor searches for parties' do
 
       VCR.use_cassette("create past, present, future party") do
         @today_party = create(:party, title: "Today Party", date: Date.today)
-        @future_party = create(:party, title: "Future Party", date: "11-11-2018")
+        @future_party = create(:party, title: "Future Party", date: "11-11-2019")
         @past_party = create(:party, title: "Past Party", date: "07-07-2017")
       end
 
