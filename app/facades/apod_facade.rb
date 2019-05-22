@@ -1,7 +1,8 @@
 class ApodFacade
 
   def source
-    apod_background || default_background
+    # apod_background || default_background
+    ""
   end
     
   def apod_background
